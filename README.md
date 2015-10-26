@@ -1,4 +1,4 @@
-# .dotfiles
+# dotfiles
 
 > Dotfiles for git, cmder, atom, etc
 
