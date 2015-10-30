@@ -1,0 +1,8 @@
+# Bin
+alias a='atom'
+alias git='hub'
+
+# Shell
+alias ..='cd ..;'
+alias ...='.. ..'
+alias md='mkdir -p'
