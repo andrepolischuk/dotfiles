@@ -1,6 +1,6 @@
 # dotfiles
 
-> Dotfiles for git, cmder, atom, etc
+> Dotfiles for shell, zsh, git, etc
 
 ## License
 
