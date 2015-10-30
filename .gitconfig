@@ -1,10 +1,5 @@
 [user]
 	name = andrepolischuk
 	email = andre.polischuk@gmail.com
-[core]
-	eol = lf
-	autocrlf = input
 [color]
 	ui = auto
-[url "https://"]
-	insteadOf = git://
