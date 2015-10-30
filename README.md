@@ -1,4 +1,4 @@
-# dotfiles
+# .dotfiles
 
 > Dotfiles for shell, zsh, git, etc
 
