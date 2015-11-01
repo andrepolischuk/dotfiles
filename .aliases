@@ -1,6 +1,10 @@
 # Bin
 alias a='atom'
 alias git='hub'
+alias ni='npm install'
+alias nig='npm install --global'
+alias nis='npm install --save'
+alias nid='npm install --save-dev'
 
 # Shell
 alias ..='cd ..;'
