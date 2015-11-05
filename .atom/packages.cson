@@ -1,0 +1,8 @@
+packages: [
+  "atom-jade"
+  "autocomplete-paths"
+  "editorconfig"
+  "emmet"
+  "file-icons"
+  "package-sync"
+]

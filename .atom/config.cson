@@ -1,0 +1,19 @@
+"*":
+  "exception-reporting":
+    userId: "b69f0c45-55e4-4358-1771-0b1587794f0a"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    invisibles: {}
+    scrollPastEnd: true
+    showInvisibles: true
+    softWrap: true
+    fontSize: 12
+  "file-icons":
+    coloured: false
+  "one-light-ui": {}
