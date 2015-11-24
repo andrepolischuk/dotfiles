@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-git clone https://github.com/andrepolischuk/.dotfiles && ~/.dotfiles/dotfiles
+git clone https://github.com/andrepolischuk/.dotfiles && ~/.dotfiles/init
 ```
 
 ## License
