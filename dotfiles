@@ -2,7 +2,9 @@
 
 export DOTFILES=$HOME/.dotfiles
 
-ln -s $DOTFILES/.atom/*    $HOME/.atom
-ln -s $DOTFILES/.gitconfig $HOME/.gitconfig
-ln -s $DOTFILES/.aliases   $HOME/.aliases
-ln -s $DOTFILES/.zshrc     $HOME/.zshrc
+ln -s $DOTFILES/.atom/*   $HOME/.atom
+ln -s $DOTFILES/.aliases  $HOME/.aliases
+ln -s $DOTFILES/.zshrc    $HOME/.zshrc
+
+ln -s $DOTFILES/.gitconfigs/*        $HOME/.gitconfigs
+ln -s $DOTFILES/.gitconfigs/default  $HOME/.gitconfig
