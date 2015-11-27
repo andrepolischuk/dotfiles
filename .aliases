@@ -12,6 +12,9 @@ alias ...='.. ..'
 alias md='mkdir -p'
 
 # Git
+alias gpl='git pull'
+alias gt='git tag'
+
 gset() {
   unlink $HOME/.gitconfig
   if [ $1 ]
