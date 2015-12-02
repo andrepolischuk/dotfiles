@@ -5,7 +5,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 
 # Add ssh key
-ssh-add ~/.ssh/id_rsa
+# ssh-add ~/.ssh/id_rsa
 
 # Add sourses
 source $ZSH/oh-my-zsh.sh

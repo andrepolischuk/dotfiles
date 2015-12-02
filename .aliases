@@ -14,14 +14,3 @@ alias md='mkdir -p'
 # Git
 alias gpl='git pull'
 alias gt='git tag'
-
-gset() {
-  unlink $HOME/.gitconfig
-  if [ $1 ]
-  then
-    ln -s $HOME/.gitconfigs/$1 $HOME/.gitconfig
-  else
-    ln -s $HOME/.gitconfigs/default $HOME/.gitconfig
-  fi
-}
-alias gset=gset
