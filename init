@@ -6,5 +6,7 @@ ln -s $DOTFILES/.atom/*     $HOME/.atom
 ln -s $DOTFILES/.aliases    $HOME/.aliases
 ln -s $DOTFILES/.exports    $HOME/.exports
 ln -s $DOTFILES/.gitconfig  $HOME/.gitconfig
+ln -s $DOTFILES/.tmux.conf  $HOME/.tmux.conf
+ln -s $DOTFILES/.tmuxinator $HOME/.tmuxinator
 ln -s $DOTFILES/.vimrc      $HOME/.vimrc
 ln -s $DOTFILES/.zshrc      $HOME/.zshrc
