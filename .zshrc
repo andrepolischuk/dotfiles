@@ -11,7 +11,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.exports
-source $HOME/.bin/tmuxinator.zsh
 
 # Add completions
 fpath=(~/.oh-my-zsh/completions $fpath)
