@@ -5,4 +5,5 @@ export DOTFILES=$HOME/.dotfiles
 ln -s $DOTFILES/.atom/*     $HOME/.atom
 ln -s $DOTFILES/.aliases    $HOME/.aliases
 ln -s $DOTFILES/.gitconfig  $HOME/.gitconfig
+ln -s $DOTFILES/.vimrc      $HOME/.vimrc
 ln -s $DOTFILES/.zshrc      $HOME/.zshrc
