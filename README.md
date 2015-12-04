@@ -1,6 +1,6 @@
 # .dotfiles
 
-> Dotfiles for shell, zsh, git, etc
+> Dotfiles for shell, zsh, git, vim
 
 ## Install
 
