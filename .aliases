@@ -5,6 +5,7 @@ alias git='hub'
 # shell
 alias ..='cd ..;'
 alias ...='.. ..'
+alias ....='.. .. ..'
 alias md='mkdir -p'
 
 # npm
