@@ -1,17 +1,23 @@
-# Bin
+# bin
 alias a='atom'
 alias git='hub'
-alias ni='npm install'
-alias nig='npm install --global'
-alias nis='npm install --save'
-alias nid='npm install --save-dev'
 
-# Shell
+# shell
 alias ..='cd ..;'
 alias ...='.. ..'
 alias md='mkdir -p'
 
-# Git
+# npm
+alias ni='npm install'
+alias nig='npm install --global'
+alias nis='npm install --save'
+alias nid='npm install --save-dev'
+alias np='npm publish'
+alias nr='npm run'
+alias nt='npm test'
+alias nv='npm version'
+
+# git
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
