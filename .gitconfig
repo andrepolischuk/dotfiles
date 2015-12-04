@@ -1,5 +1,7 @@
 [user]
 	name = andrepolischuk
 	email = andre.polischuk@gmail.com
+[credential]
+	helper = osxkeychain
 [color]
 	ui = auto
