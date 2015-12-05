@@ -9,6 +9,9 @@
       "one-light-syntax"
     ]
     customFileTypes:
+      "text.html.basic": [
+        "soy"
+      ]
       "source.js": [
         "jsx"
         "es5"
