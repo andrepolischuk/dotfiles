@@ -6,6 +6,7 @@ set number
 set nostartofline
 set showcmd
 set showmode
+set tildeop
 set title
 set clipboard=unnamed
 set scrolloff=10
@@ -29,7 +30,7 @@ set smartindent
 set list
 set listchars=tab:»·,trail:·,nbsp:·,eol:¬
 
-" shortcuts for tab switching
+" tab switching
 noremap [ gT
 noremap ] gt
 
