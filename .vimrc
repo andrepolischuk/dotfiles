@@ -11,16 +11,19 @@ set title
 set clipboard=unnamed
 set scrolloff=10
 
-" encoding
+" Encoding
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
 
-" search
+" Automatically clean trailing whitespaces on save
+autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
+
+" Search
 set ignorecase
 set incsearch
 set hlsearch
 
-" indent
+" Indent
 set tabstop=2
 set shiftwidth=2
 set smarttab
@@ -30,12 +33,24 @@ set smartindent
 set list
 set listchars=tab:»·,trail:·,nbsp:·,eol:¬
 
-" tab switching
+" Shortcuts for moving between tabs
 noremap [ gT
 noremap ] gt
 
-" syntax
+" Syntax
 syntax on
 highlight NonText ctermfg=lightgrey
 highlight SpecialKey ctermfg=lightgrey
 highlight LineNr ctermfg=lightgrey
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Plugins
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'editorconfig/editorconfig-vim'
+
+" All plugins must be added before the following line
+call vundle#end()
+filetype plugin indent on
