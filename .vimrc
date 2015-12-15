@@ -61,6 +61,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
+Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
