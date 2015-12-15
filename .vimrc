@@ -47,12 +47,6 @@ set listchars=tab:»·,trail:·,nbsp:·,eol:¬
 noremap [ gT
 noremap ] gt
 
-" Syntax
-syntax on
-highlight NonText ctermfg=lightgrey
-highlight SpecialKey ctermfg=lightgrey
-highlight LineNr ctermfg=lightgrey
-
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -76,6 +70,21 @@ Plugin 'scrooloose/nerdtree'
   let NERDTreeIgnore += ['^\.git$', '^\.hg$', '^\.svn$', '^\.$', '^\.\.$', '^Thumbs\.db$', '^\.DS_Store$']
   let g:NERDTreeDirArrowExpandable='▸'
   let g:NERDTreeDirArrowCollapsible='▾'
+
+" Syntax
+Plugin 'groenewege/vim-less'
+Plugin 'pangloss/vim-javascript'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'stephenway/postcss.vim'
+
+au BufRead *.json set filetype=json
+au BufRead,BufNewFile *.es6 set filetype=javascript
+
+syntax on
+highlight NonText ctermfg=lightgrey
+highlight SpecialKey ctermfg=lightgrey
+highlight LineNr ctermfg=lightgrey
 
 " All plugins must be added before the following line
 call vundle#end()
