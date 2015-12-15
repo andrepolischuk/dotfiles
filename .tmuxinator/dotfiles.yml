@@ -3,5 +3,7 @@ root: ~/.dotfiles
 
 windows:
   - dotfiles:
+    layout: main-horizontal
     panes:
-      - dotfiles
+      - zsh
+  - vim: vim
