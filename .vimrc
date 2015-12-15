@@ -60,7 +60,7 @@ call vundle#begin()
 " Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ciaranm/detectindent'
+Plugin 'tpope/vim-sleuth'
 Plugin 'scrooloose/nerdtree'
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
