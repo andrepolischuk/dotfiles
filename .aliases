@@ -1,15 +1,15 @@
-# bin
+# Bin
 alias a='atom'
 alias git='hub'
 
-# shell
+# Shell
 alias ..='cd ..;'
 alias ...='.. ..'
 alias ....='.. .. ..'
 alias md='mkdir -p'
 alias rmrf='rm -rf'
 
-# npm
+# Npm
 alias ni='npm install'
 alias nig='npm install --global'
 alias nis='npm install --save'
@@ -19,7 +19,7 @@ alias nr='npm run'
 alias nt='npm test'
 alias nv='npm version'
 
-# git
+# Git
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'

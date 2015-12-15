@@ -55,37 +55,31 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-  map <C-n> :NERDTreeToggle<CR>
-  let NERDTreeShowHidden=1
-  let NERDTreeHighlightCursorline=0
-  let NERDTreeIgnore = []
-  for suffix in split(&suffixes, ',')
-    let NERDTreeIgnore += [ escape(suffix, '.~') . '$' ]
-  endfor
-  let NERDTreeIgnore += ['^\.git$', '^\.hg$', '^\.svn$', '^\.$', '^\.\.$', '^Thumbs\.db$', '^\.DS_Store$']
-  let g:NERDTreeDirArrowExpandable='▸'
-  let g:NERDTreeDirArrowCollapsible='▾'
+Plugin 'ervandew/supertab'
 
-" Syntax
+" Search
+Plugin 'mileszs/ack.vim'
+Plugin 'kien/ctrlp.vim'
+  let g:ctrlp_show_hidden=1
+  let g:ctrlp_custom_ignore='\v[\/](\.(git|hg|svn)|node_modules)$'
+
+" Languages
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
+  let g:vim_markdown_folding_disabled=1
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'stephenway/postcss.vim'
 
-au BufRead *.json set filetype=json
+au BufRead *.json set filetype=javascript
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
-syntax on
-highlight NonText ctermfg=lightgrey
-highlight SpecialKey ctermfg=lightgrey
-highlight LineNr ctermfg=lightgrey
-
-" All plugins must be added before the following line
+" Vundle end
 call vundle#end()
+
+" Syntax
+syntax on
+hi NonText ctermfg=lightgrey
+hi SpecialKey ctermfg=lightgrey
+hi LineNr ctermfg=lightgrey
 filetype plugin indent on
