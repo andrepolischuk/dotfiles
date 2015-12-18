@@ -25,4 +25,5 @@
     fontSize: 12
   "file-icons":
     coloured: false
-  "one-light-ui": {}
+  "one-light-ui":
+    layoutMode: "Compact"
