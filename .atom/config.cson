@@ -14,6 +14,7 @@
       "one-light-syntax"
     ]
   editor:
+    fontFamily: "Fira Code"
     fontSize: 12
     invisibles: {}
     scrollPastEnd: true
