@@ -26,5 +26,7 @@
     coloured: false
   "one-light-ui":
     layoutMode: "Compact"
+  "tree-view":
+    sortFoldersBeforeFiles: false
   welcome:
     showOnStartup: false
