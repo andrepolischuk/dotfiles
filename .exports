@@ -1,3 +1,4 @@
+# Vim
 export EDITOR=vim
 
 # Locales

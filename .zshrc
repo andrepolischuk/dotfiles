@@ -4,13 +4,10 @@ ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 
-# Add ssh key
-# ssh-add ~/.ssh/id_rsa
-
 # Add sourses
 source $HOME/.exports
-source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
+source $ZSH/oh-my-zsh.sh
 
 # Add completions
 fpath=(~/.oh-my-zsh/completions $fpath)
