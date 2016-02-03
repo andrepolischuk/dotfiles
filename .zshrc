@@ -6,8 +6,8 @@ plugins=(git)
 
 # Add sourses
 source $HOME/.exports
-source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
+source $HOME/.aliases
 
 # Add completions
 fpath=(~/.oh-my-zsh/completions $fpath)
