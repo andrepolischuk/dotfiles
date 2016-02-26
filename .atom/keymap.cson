@@ -29,3 +29,6 @@
 'atom-text-editor:not([mini])':
   'alt-up': 'editor:add-selection-above'
   'alt-down': 'editor:add-selection-below'
+
+'atom-workspace':
+  'cmd-o': 'advanced-open-file:toggle'
