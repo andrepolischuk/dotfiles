@@ -18,6 +18,7 @@
     fontFamily: "Fira Code"
     fontSize: 12
     invisibles: {}
+    preferredLineLength: 100
     scrollPastEnd: true
     showInvisibles: true
     softWrap: true
@@ -28,6 +29,7 @@
   "one-light-ui":
     layoutMode: "Compact"
   "tree-view":
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
