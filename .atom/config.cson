@@ -29,7 +29,6 @@
   "one-light-ui":
     layoutMode: "Compact"
   "tree-view":
-    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
