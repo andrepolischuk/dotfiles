@@ -24,6 +24,9 @@ endfun
 " Automatically clean trailing whitespaces on save
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
+" Aliases
+cnoreabbrev Q q!
+
 " Encoding
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
