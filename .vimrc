@@ -26,6 +26,7 @@ autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
 " Aliases
 cnoreabbrev Q q!
+cnoreabbrev nt tabnew
 
 " Encoding
 set encoding=utf-8 nobomb
