@@ -22,6 +22,7 @@ alias nt='npm test'
 alias nv='npm version'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nk='npm link'
+alias nod='npm outdated'
 
 # Git
 alias ga='git add'
