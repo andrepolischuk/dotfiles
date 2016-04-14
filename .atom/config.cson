@@ -15,7 +15,7 @@
       "one-light-syntax"
     ]
   editor:
-    fontFamily: "Fira Code"
+    fontFamily: "Menlo"
     fontSize: 12
     invisibles: {}
     preferredLineLength: 100
