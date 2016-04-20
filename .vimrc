@@ -4,12 +4,14 @@ set noswapfile
 set nowrap
 set number
 set nostartofline
-set showcmd
-set showmode
+set noshowcmd
+set noshowmode
+set noruler
 set tildeop
 set title
 set clipboard=unnamed
 set scrolloff=10
+set cul
 
 " Remember info about open buffers on close
 set viminfo^=%
@@ -60,6 +62,15 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+  set laststatus=2
+  let g:airline_theme = 'papercolor'
+  let g:airline_left_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#show_buffers = 0
+  let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Search
 Plugin 'mileszs/ack.vim'
@@ -87,4 +98,5 @@ colorscheme zen
 hi NonText ctermfg=lightgrey
 hi SpecialKey ctermfg=lightgrey
 hi LineNr ctermfg=lightgrey
+hi CursorLine ctermbg=255 cterm=none
 filetype plugin indent on
