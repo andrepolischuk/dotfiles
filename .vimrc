@@ -45,7 +45,10 @@ set shiftwidth=2
 set smarttab
 set expandtab
 set autoindent
-set smartindent
+set copyindent
+set preserveindent
+set nosmartindent
+set nocindent
 set list
 set listchars=tab:»·,trail:·,nbsp:·,eol:¬
 
@@ -63,6 +66,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
 Plugin 'NLKNguyen/papercolor-theme'
+
+" Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
@@ -80,15 +85,21 @@ Plugin 'kien/ctrlp.vim'
   let g:ctrlp_custom_ignore='\v[\/](\.(git|hg|svn|DS_Store)|node_modules)$'
 
 " Languages
+Plugin 'elzr/vim-json'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 Plugin 'isRuslan/vim-es6'
+Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
+  let g:jsx_ext_required=0
+Plugin 'gregsexton/MatchTag'
 Plugin 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled=1
 Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
 
+" Filetypes
 au BufRead *.json set filetype=javascript
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
@@ -96,9 +107,12 @@ au BufRead,BufNewFile *.es6 set filetype=javascript
 call vundle#end()
 
 " Syntax
-syntax on
+filetype plugin indent on
+syntax enable
+
+" Color scheme
 set background=light
 colorscheme PaperColor
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
-filetype plugin indent on
+hi Special ctermfg=203 cterm=bold
