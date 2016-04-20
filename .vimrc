@@ -83,6 +83,7 @@ call vundle#end()
 
 " Syntax
 syntax on
+colorscheme zen
 hi NonText ctermfg=lightgrey
 hi SpecialKey ctermfg=lightgrey
 hi LineNr ctermfg=lightgrey
