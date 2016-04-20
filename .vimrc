@@ -62,10 +62,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
-  let g:airline_theme = 'papercolor'
+  let g:airline_theme = 'PaperColor'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#tabline#enabled = 1
@@ -81,6 +82,8 @@ Plugin 'kien/ctrlp.vim'
 " Languages
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
+Plugin 'isRuslan/vim-es6'
+Plugin 'mxw/vim-jsx'
 Plugin 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled=1
 Plugin 'gorodinskiy/vim-coloresque'
@@ -94,9 +97,8 @@ call vundle#end()
 
 " Syntax
 syntax on
-colorscheme zen
-hi NonText ctermfg=lightgrey
-hi SpecialKey ctermfg=lightgrey
-hi LineNr ctermfg=lightgrey
-hi CursorLine ctermbg=255 cterm=none
+set background=light
+colorscheme PaperColor
+hi NORMAL ctermbg=none
+hi CursorLine ctermbg=255
 filetype plugin indent on
