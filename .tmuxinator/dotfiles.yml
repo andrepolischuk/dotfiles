@@ -1,9 +1,0 @@
-name: dotfiles
-root: ~/.dotfiles
-
-windows:
-  - dotfiles:
-    layout: main-horizontal
-    panes:
-      - zsh
-  - vim: vim
