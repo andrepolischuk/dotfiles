@@ -12,6 +12,7 @@ set title
 set clipboard=unnamed
 set scrolloff=10
 set cul
+set autoread
 
 " Remember info about open buffers on close
 set viminfo^=%
@@ -115,4 +116,4 @@ set background=light
 colorscheme PaperColor
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
-hi Special ctermfg=203 cterm=bold
+hi Special ctermfg=160 cterm=bold
