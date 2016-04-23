@@ -28,6 +28,7 @@ endfun
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
 " Aliases
+cnoreabbrev W w
 cnoreabbrev Q q!
 cnoreabbrev nt tabnew
 
@@ -113,7 +114,6 @@ syntax enable
 
 " Color scheme
 set background=light
-colorscheme PaperColor
+colorscheme materialbox
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
-hi Special ctermfg=160 cterm=bold
