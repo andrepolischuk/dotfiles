@@ -11,6 +11,7 @@ set tildeop
 set title
 set clipboard=unnamed
 set scrolloff=10
+set backspace=2
 set cul
 set autoread
 
@@ -68,6 +69,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'jiangmiao/auto-pairs'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
@@ -117,3 +119,4 @@ set background=light
 colorscheme materialbox
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
+hi CursorLineNR ctermbg=255
