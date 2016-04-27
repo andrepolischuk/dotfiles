@@ -68,14 +68,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'reedes/vim-colors-pencil'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
-  let g:airline_theme = 'PaperColor'
+  let g:airline_theme = 'pencil'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#tabline#enabled = 1
@@ -86,6 +86,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_show_hidden=1
+  let g:ctrlp_match_window = 'order:ttb,max:15,results:15'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Languages
@@ -102,6 +103,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
+Plugin 'jiangmiao/auto-pairs'
 
 " Filetypes
 au BufRead *.json set filetype=javascript
@@ -116,7 +118,11 @@ syntax enable
 
 " Color scheme
 set background=light
-colorscheme materialbox
+colorscheme pencil
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
-hi CursorLineNR ctermbg=255
+hi CursorLineNR ctermfg=245 ctermbg=255
+hi GitGutterAdd ctermfg=10
+hi GitGutterChange ctermfg=11
+hi GitGutterDelete ctermfg=167
+hi GitGutterChangeDelete ctermfg=11
