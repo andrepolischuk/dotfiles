@@ -122,6 +122,8 @@ colorscheme pencil
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
 hi CursorLineNR ctermfg=245 ctermbg=255
+hi NonText ctermfg=253
+hi SpecialKey ctermfg=253
 hi GitGutterAdd ctermfg=10
 hi GitGutterChange ctermfg=11
 hi GitGutterDelete ctermfg=167
