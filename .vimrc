@@ -127,6 +127,7 @@ hi CursorLineNR ctermfg=247 ctermbg=255
 hi LineNr ctermfg=251
 hi NonText ctermfg=251
 hi SpecialKey ctermfg=251
+hi Function ctermfg=24
 hi Comment ctermfg=249
 hi Todo ctermfg=167 ctermbg=none
 hi GitGutterAdd ctermfg=10
