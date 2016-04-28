@@ -119,11 +119,16 @@ syntax enable
 " Color scheme
 set background=light
 colorscheme pencil
+
+" Override colors
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
-hi CursorLineNR ctermfg=245 ctermbg=255
-hi NonText ctermfg=253
-hi SpecialKey ctermfg=253
+hi CursorLineNR ctermfg=247 ctermbg=255
+hi LineNr ctermfg=251
+hi NonText ctermfg=251
+hi SpecialKey ctermfg=251
+hi Comment ctermfg=249
+hi Todo ctermfg=167 ctermbg=none
 hi GitGutterAdd ctermfg=10
 hi GitGutterChange ctermfg=11
 hi GitGutterDelete ctermfg=167
