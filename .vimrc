@@ -69,6 +69,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'reedes/vim-colors-pencil'
 
 " Airline
