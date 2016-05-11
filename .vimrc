@@ -70,6 +70,7 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'a/seoul256.vim'
 Plugin 'reedes/vim-colors-pencil'
 
 " Airline
@@ -86,28 +87,29 @@ Plugin 'vim-airline/vim-airline-themes'
 " Search
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-  let g:ctrlp_show_hidden=1
+  let g:ctrlp_show_hidden = 1
   let g:ctrlp_match_window = 'order:ttb,max:15,results:15'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Languages
 Plugin 'elzr/vim-json'
+  let g:vim_json_syntax_conceal = 0
 Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
-Plugin 'othree/es.next.syntax.vim'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
+  let g:used_javascript_libs = 'underscore,react,flux,ramda'
 Plugin 'mxw/vim-jsx'
-  let g:jsx_ext_required=0
+  let g:jsx_ext_required = 0
+Plugin 'othree/es.next.syntax.vim'
 Plugin 'gregsexton/MatchTag'
 Plugin 'plasticboy/vim-markdown'
-  let g:vim_markdown_folding_disabled=1
+  let g:vim_markdown_folding_disabled = 1
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
 Plugin 'jiangmiao/auto-pairs'
 
 " Filetypes
-au BufRead *.json set filetype=javascript
 au BufRead,BufNewFile *.es6 set filetype=javascript
 
 " Vundle end
@@ -119,19 +121,13 @@ syntax enable
 
 " Color scheme
 set background=light
-colorscheme pencil
+colorscheme seoul256-light
 
 " Override colors
 hi NORMAL ctermbg=none
 hi CursorLine ctermbg=255
 hi CursorLineNR ctermfg=247 ctermbg=255
-hi LineNr ctermfg=251
+hi LineNr ctermfg=251 ctermbg=none
 hi NonText ctermfg=251
-hi SpecialKey ctermfg=251
-hi Function ctermfg=24
 hi Comment ctermfg=249
-hi Todo ctermfg=167 ctermbg=none
-hi GitGutterAdd ctermfg=10
-hi GitGutterChange ctermfg=11
-hi GitGutterDelete ctermfg=167
-hi GitGutterChangeDelete ctermfg=11
+hi Todo ctermbg=none
