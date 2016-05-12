@@ -3,7 +3,6 @@
 export DOTFILES=$HOME/.dotfiles
 
 # Setup
-ln -s $DOTFILES/.atom/*     $HOME/.atom
 ln -s $DOTFILES/.aliases    $HOME/.aliases
 ln -s $DOTFILES/.exports    $HOME/.exports
 ln -s $DOTFILES/.gitconfig  $HOME/.gitconfig
