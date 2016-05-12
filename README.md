@@ -2,6 +2,8 @@
 
 > Dotfiles for shell, zsh, etc
 
+![](screenshot.png)
+
 ## Install
 
 ```sh
