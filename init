@@ -1,10 +1,62 @@
 #!/bin/sh
 
+RESET="\033[0m"
+BOLD="\033[1m"
+CYAN="\033[0;96m"
+RED="\033[0;91m"
+GREEN="\033[0;92m"
+
+info() {
+  echo ; echo "${CYAN}${BOLD}${*}${RESET}" ; echo
+}
+
+error() {
+  echo ; echo "${RED}${BOLD}${*}${RESET}" ; echo
+}
+
+success() {
+  echo ; echo "${GREEN}${BOLD}${*}${RESET}" ; echo
+}
+
+# Set directory
 export DOTFILES=$HOME/.dotfiles
 
-# Setup
-ln -s $DOTFILES/.aliases    $HOME/.aliases
-ln -s $DOTFILES/.exports    $HOME/.exports
-ln -s $DOTFILES/.gitconfig  $HOME/.gitconfig
-ln -s $DOTFILES/.vimrc      $HOME/.vimrc
-ln -s $DOTFILES/.zshrc      $HOME/.zshrc
+# Ask for password
+sudo -v
+
+# Preinstall
+if ! hash zsh 2>/dev/null ; then
+  if [ `uname` == 'Darwin' ]; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install hub zsh ack
+  elif [ `uname` == 'Linux' ]; then
+    sudo apt-get install hub zsh ack-grep
+  else
+    error "Zsh is required"
+    exit
+  fi
+fi
+
+# Registers zsh as a default shell
+zsh_path=$(which zsh)
+
+if [ -z `grep "$zsh_path" /etc/shells` ]; then
+  info "Path to Zsh: $zsh_path. Enter your password to change default shell:"
+  grep -Fxq "$zsh_path" /etc/shells || sudo bash -c "echo $zsh_path >> /etc/shells"
+  chsh -s "$zsh_path" $USER || error "Cannot set zsh as default shell!"
+fi
+
+# Installing oh-my-zsh
+[ -d ~/.oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Installing vundle
+[ -d ~/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Make symlinks
+ln -fs $DOTFILES/.aliases    $HOME/.aliases
+ln -fs $DOTFILES/.exports    $HOME/.exports
+ln -fs $DOTFILES/.gitconfig  $HOME/.gitconfig
+ln -fs $DOTFILES/.vimrc      $HOME/.vimrc
+ln -fs $DOTFILES/.zshrc      $HOME/.zshrc
+
+success "Dotfiles installed successfully! Please restart your terminal!"

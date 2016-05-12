@@ -5,7 +5,12 @@
 ## Install
 
 ```sh
+# dotfiles
 git clone https://github.com/andrepolischuk/.dotfiles && ~/.dotfiles/init
+
+# git config
+git config --global user.name "Your Name"
+git config --global user.email "email@yoursite.com"
 ```
 
 ## Apps
@@ -13,6 +18,7 @@ git clone https://github.com/andrepolischuk/.dotfiles && ~/.dotfiles/init
 * [zsh][zsh]
 * [oh-my-zsh][oh-my-zsh]
 * git
+* [hub][hub]
 * vim
 
 ## License
@@ -21,3 +27,4 @@ MIT
 
 [zsh]: http://www.zsh.org/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
+[hub]: https://github.com/github/hub
