@@ -71,13 +71,12 @@ Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'a/seoul256.vim'
-Plugin 'reedes/vim-colors-pencil'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
-  let g:airline_theme = 'pencil'
+  let g:airline_theme = 'lucius'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#tabline#enabled = 1
@@ -124,10 +123,11 @@ set background=light
 colorscheme seoul256-light
 
 " Override colors
-hi NORMAL ctermbg=none
+hi Normal ctermbg=none
 hi CursorLine ctermbg=255
-hi CursorLineNR ctermfg=247 ctermbg=255
+hi CursorLineNR ctermbg=255
 hi LineNr ctermfg=251 ctermbg=none
+hi VertSplit ctermfg=251 ctermbg=none
 hi NonText ctermfg=251
-hi Comment ctermfg=249
+hi Comment ctermfg=247
 hi Todo ctermbg=none
