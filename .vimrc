@@ -9,7 +9,7 @@ set noshowmode
 set noruler
 set tildeop
 set title
-set clipboard=unnamed
+set clipboard+=unnamed
 set scrolloff=10
 set backspace=2
 set cul
@@ -76,7 +76,7 @@ Plugin 'a/seoul256.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
-  let g:airline_theme = 'lucius'
+  let g:airline_theme = 'solarized'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#tabline#enabled = 1
@@ -99,6 +99,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
   let g:used_javascript_libs = 'underscore,react,flux,ramda'
 Plugin 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
+Plugin 'gavocanov/vim-js-indent'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'gregsexton/MatchTag'
 Plugin 'plasticboy/vim-markdown'
