@@ -76,7 +76,7 @@ Plugin 'a/seoul256.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
-  let g:airline_theme = 'solarized'
+  let g:airline_theme = 'lucius'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#tabline#enabled = 1
