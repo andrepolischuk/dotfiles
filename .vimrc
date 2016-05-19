@@ -28,6 +28,9 @@ endfun
 " Automatically clean trailing whitespaces on save
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
+" Reload buf when focusing vim
+autocmd FocusGained,BufEnter * :silent! !
+
 " Aliases
 cnoreabbrev W w
 cnoreabbrev Q q!
