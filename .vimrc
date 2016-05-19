@@ -135,3 +135,4 @@ hi VertSplit ctermfg=251 ctermbg=none
 hi NonText ctermfg=251
 hi Comment ctermfg=247
 hi Todo ctermbg=none
+hi link Cursor Visual
