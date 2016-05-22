@@ -11,6 +11,7 @@ source $DOTFILES/.exports
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/.aliases
 source $DOTFILES/lib/neat/neat.zsh
+source $DOTFILES/lib/gitio-zsh/gitio.plugin.zsh
 
 # Add completions
 fpath=(~/.oh-my-zsh/completions $fpath)

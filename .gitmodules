@@ -1,3 +1,6 @@
 [submodule "lib/neat"]
 	path = lib/neat
 	url = https://github.com/andrepolischuk/neat
+[submodule "lib/gitio-zsh"]
+	path = lib/gitio-zsh
+	url = https://github.com/denysdovhan/gitio-zsh
