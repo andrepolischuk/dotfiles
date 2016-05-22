@@ -22,6 +22,7 @@ git config --global user.email "email@yoursite.com"
 * git
 * [hub][hub]
 * vim
+* [neat zsh prompt][neat]
 
 ## License
 
@@ -30,3 +31,4 @@ MIT
 [zsh]: http://www.zsh.org/
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [hub]: https://github.com/github/hub
+[neat]: https://github.com/andrepolischuk/neat
