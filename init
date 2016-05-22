@@ -25,14 +25,14 @@ export DOTFILES=$HOME/.dotfiles
 sudo -v
 
 # Preinstall
-if ! hash zsh 2>/dev/null ; then
+if ! hash zsh hub ack 2>/dev/null ; then
   if [ `uname` == 'Darwin' ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install hub zsh ack
+    brew install zsh hub ack
   elif [ `uname` == 'Linux' ]; then
-    sudo apt-get install hub zsh ack-grep
+    sudo apt-get install zsh hub ack-grep
   else
-    error "Zsh is required"
+    error "zsh, hub and ack is required"
     exit
   fi
 fi
@@ -51,6 +51,10 @@ fi
 
 # Installing vundle
 [ -d ~/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Installing git modules
+git submodule init
+git submodule update
 
 # Make symlinks
 ln -fs $DOTFILES/.aliases    $HOME/.aliases
