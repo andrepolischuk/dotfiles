@@ -35,6 +35,7 @@ autocmd FocusGained,BufEnter * :silent! !
 cnoreabbrev W w
 cnoreabbrev Q q!
 cnoreabbrev nt tabnew
+cnoreabbrev ack Ack
 
 " Encoding
 set encoding=utf-8 nobomb

@@ -1,0 +1,5 @@
+--ignore-dir=build
+--ignore-dir=deploy
+--ignore-dir=dist
+--ignore-dir=node_modules
+--sort-files
