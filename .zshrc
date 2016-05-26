@@ -10,8 +10,10 @@ export DOTFILES=$HOME/.dotfiles
 source $DOTFILES/.exports
 source $ZSH/oh-my-zsh.sh
 source $DOTFILES/.aliases
+source $DOTFILES/lib/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $DOTFILES/lib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $DOTFILES/lib/neat/neat.zsh
-source $DOTFILES/lib/gitio-zsh/gitio.plugin.zsh
+source $DOTFILES/lib/gitio-zsh/gitio.zsh
 
 # Add completions
 fpath=(~/.oh-my-zsh/completions $fpath)

@@ -4,3 +4,9 @@
 [submodule "lib/gitio-zsh"]
 	path = lib/gitio-zsh
 	url = https://github.com/denysdovhan/gitio-zsh
+[submodule "lib/zsh-syntax-highlighting"]
+	path = lib/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "lib/zsh-autosuggestions"]
+	path = lib/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
