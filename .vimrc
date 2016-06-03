@@ -57,7 +57,7 @@ set preserveindent
 set nosmartindent
 set nocindent
 set list
-set listchars=tab:»·,trail:·,nbsp:·,eol:¬
+set listchars=tab:➛·,trail:·,nbsp:·,eol:¬
 
 " Shortcuts for moving between tabs
 noremap [ gT
