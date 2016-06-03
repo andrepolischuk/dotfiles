@@ -46,3 +46,6 @@ alias gpl='git pull'
 alias grh='git reset --hard'
 alias gst='git status'
 alias gt='git tag'
+
+# Brew
+alias buf='brew update && brew upgrade && brew prune && brew cleanup'
