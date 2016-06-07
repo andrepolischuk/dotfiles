@@ -36,6 +36,7 @@ cnoreabbrev W w
 cnoreabbrev Q q!
 cnoreabbrev nt tabnew
 cnoreabbrev ack Ack
+cnoreabbrev ut UndotreeToggle
 
 " Encoding
 set encoding=utf-8 nobomb
@@ -74,6 +75,7 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'mbbill/undotree'
 Plugin 'a/seoul256.vim'
 
 " Airline
