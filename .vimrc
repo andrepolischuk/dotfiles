@@ -117,6 +117,7 @@ Plugin 'jiangmiao/auto-pairs'
 
 " Filetypes
 au BufRead,BufNewFile *.es6 set filetype=javascript
+au BufRead,BufNewFile *.soy set filetype=html
 
 " Vundle end
 call vundle#end()
