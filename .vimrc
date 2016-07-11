@@ -114,6 +114,7 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
 
 " Filetypes
 au BufRead,BufNewFile *.es6 set filetype=javascript
