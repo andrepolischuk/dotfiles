@@ -49,12 +49,18 @@ fi
 # Installing oh-my-zsh
 [ -d ~/.oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Installing oh-my-zsh plugins
+zsh_custom_plugins=~/.oh-my-zsh/custom/plugins
+
+if [ ! -d "$zsh_custom_plugins/neat" ]; then
+  git clone https://github.com/andrepolischuk/neat $zsh_custom_plugins/neat
+  git clone https://github.com/denysdovhan/gitio-zsh $zsh_custom_plugins/gitio
+  git clone https://github.com/zsh-users/zsh-autosuggestions $zsh_custom_plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting $zsh_custom_plugins/zsh-syntax-highlighting
+fi
+
 # Installing vundle
 [ -d ~/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# Installing git modules
-git submodule init
-git submodule update
 
 # Make symlinks
 ln -fs $DOTFILES/.aliases    $HOME/.aliases
