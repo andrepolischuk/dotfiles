@@ -14,3 +14,6 @@ source $DOTFILES/.aliases
 # Add completions
 fpath=(~/.oh-my-zsh/completions $fpath)
 autoload -U compinit && compinit
+
+# Set plugin defaults
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=247"

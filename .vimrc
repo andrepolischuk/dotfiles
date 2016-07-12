@@ -76,13 +76,13 @@ Plugin 'ervandew/supertab'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'mbbill/undotree'
-Plugin 'a/seoul256.vim'
+Plugin 'rakr/vim-one'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
-  let g:airline_theme = 'lucius'
+  let g:airline_theme = 'one'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#tabline#enabled = 1
@@ -127,17 +127,22 @@ call vundle#end()
 filetype plugin indent on
 syntax enable
 
+" Use true colors
+if (empty($TMUX))
+  if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
 " Color scheme
 set background=light
-colorscheme seoul256-light
+colorscheme one
 
 " Override colors
 hi Normal ctermbg=none
-hi CursorLine ctermbg=255
-hi CursorLineNR ctermbg=255
-hi LineNr ctermfg=251 ctermbg=none
-hi VertSplit ctermfg=251 ctermbg=none
-hi NonText ctermfg=251
-hi Comment ctermfg=247
-hi Todo ctermbg=none
-hi link Cursor Visual
+hi CursorLine guibg=#eeeeee ctermbg=255 cterm=none
+hi CursorLineNR guibg=#eeeeee ctermbg=255
+hi LineNr guifg=#c6c6c6 ctermfg=251 ctermbg=none
