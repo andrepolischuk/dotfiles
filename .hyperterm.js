@@ -8,7 +8,8 @@ module.exports = {
     'hypercwd',
     'hyperterm-blink',
     'hyperterm-title',
-    'hyperterm-one-light'
+    'hyperterm-one-light',
+    'hyperterm-subpixel-antialiased'
   ],
   localPlugins: []
 };
