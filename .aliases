@@ -3,7 +3,7 @@ alias ..='cd ..;'
 alias ...='.. ..'
 alias ....='.. .. ..'
 alias md='mkdir -p'
-alias rmrf='rm -rf'
+alias rf='rm -rf'
 
 # Npm
 alias ni='npm install'
@@ -16,11 +16,12 @@ alias ns='npm start'
 alias nt='npm test'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nk='npm link'
-alias nod='npm outdated'
+alias no='npm outdated'
 
 # Git
 alias git='hub'
 alias ga='git add'
+alias gap='git add -p'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -D'
