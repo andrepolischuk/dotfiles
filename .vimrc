@@ -51,7 +51,7 @@ autocmd FocusGained,BufEnter * :silent! !
 cnoreabbrev W w
 cnoreabbrev Q q!
 cnoreabbrev nt tabnew
-cnoreabbrev ack Ack
+cnoreabbrev ag Ag
 cnoreabbrev ut UndotreeToggle
 
 " Encoding
@@ -93,7 +93,8 @@ Plugin 'vim-airline/vim-airline-themes'
   let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Search
-Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
+  let g:ag_highlight = 1
 Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_show_hidden = 1
