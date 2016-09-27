@@ -102,6 +102,12 @@ Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_match_window = 'order:ttb,max:20,results:20'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+" Sessions
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+  let g:session_autoload = 'yes'
+  let g:session_autosave = 'yes'
+
 " Languages
 Plugin 'elzr/vim-json'
   let g:vim_json_syntax_conceal = 0
