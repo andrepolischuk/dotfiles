@@ -15,6 +15,12 @@ git config --global user.name "Your Name"
 git config --global user.email "email@yoursite.com"
 ```
 
+You may set macOS defaults:
+
+```sh
+~/.dotfiles/.macos
+```
+
 ## Apps
 
 * [hyperterm][hyperterm]
