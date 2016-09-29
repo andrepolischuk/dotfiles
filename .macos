@@ -7,7 +7,7 @@ sudo -v
 sudo nvram SystemAudioVolume=" "
 
 # Locale
-defaults write NSGlobalDomain AppleLocale -string "en_UK"
+defaults write NSGlobalDomain AppleLocale -string "ru_RU"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # 24-Hour Time
