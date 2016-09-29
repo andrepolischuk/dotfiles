@@ -127,6 +127,12 @@ defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
+# New windows open with: Empty Page
+defaults write com.apple.Safari NewWindowBehavior -int 1
+
+# New tabs open with: Empty Page
+defaults write com.apple.Safari NewTabBehavior -int 1
+
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
 
@@ -138,6 +144,10 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
+
+# Hide Status Bar
+defaults write com.apple.Safari ShowStatusBar -bool false
+defaults write com.apple.Safari ShowStatusBarInFullScreen -bool false
 
 # Hide Safari’s sidebar in Top Sites
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
@@ -232,8 +242,9 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
-for app in "cfprefsd" "Dock" "Finder" "Google Chrome" "Mail" "Photos" "Safari" "SystemUIServer"; do
-	killall "${app}" &> /dev/null
+for app in "cfprefsd" "Dock" "Finder" "Google Chrome" "Mail" "Photos" \
+  "Safari" "Safari Technology Preview" "SystemUIServer"; do
+  killall "${app}" &> /dev/null
 done
 
 echo "macOS defaults installed successfully! Please logout/restart to take effect!"
