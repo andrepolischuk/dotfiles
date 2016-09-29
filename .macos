@@ -6,6 +6,13 @@ sudo -v
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Locale
+defaults write NSGlobalDomain AppleLocale -string "en_UK"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+# 24-Hour Time
+defaults write NSGlobalDomain AppleICUForce12HourTime -bool false
+
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
@@ -83,6 +90,9 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Disable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool false
 
+# Set dock position (left, bottom, right)
+defaults write com.apple.dock orientation -string "bottom"
+
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
@@ -120,6 +130,9 @@ defaults write com.apple.dock showhidden -bool true
 # Add iOS Simulator to Launchpad
 sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
 
+# Safari restore session
+defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
+
 # Safari privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
@@ -139,11 +152,26 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
+# Open pages in tabs instead of windows: automatically
+defaults write com.apple.Safari TabCreationPolicy -int 1
+
+# Don't make new tabs active
+defaults write com.apple.Safari OpenNewTabsInFront -bool false
+
+# Command-clicking a link creates tabs
+defaults write com.apple.Safari CommandClickMakesTabs -bool true
+
 # Avoid hitting the Backspace key to go to the previous page in history
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool false
 
 # Hide Safari’s bookmarks bar by default
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+defaults write com.apple.Safari ShowFavoritesBar-v2 -bool false
+
+# Hide Safari’s tab bar by default
+defaults write com.apple.Safari AlwaysShowTabBar -bool false
+
+# Hide Safari’s favorites under the search
+defaults write com.apple.Safari ShowFavoritesUnderSmartSearchField -bool false
 
 # Hide Status Bar
 defaults write com.apple.Safari ShowStatusBar -bool false
@@ -193,11 +221,17 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 
+# Disable location services
+defaults write com.apple.Safari SafariGeolocationPermissionPolicy -int 0
+
 # Enable “Do Not Track”
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
+
+# Don't even ask about the push notifications
+defaults write com.apple.Safari CanPromptForPushNotifications -bool false
 
 # Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
 defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\U21a9"
