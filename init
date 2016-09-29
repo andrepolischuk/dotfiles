@@ -1,28 +1,10 @@
-#!/bin/sh
-
-RESET="\033[0m"
-BOLD="\033[1m"
-CYAN="\033[0;96m"
-RED="\033[0;91m"
-GREEN="\033[0;92m"
-
-info() {
-  echo ; echo "${CYAN}${BOLD}${*}${RESET}" ; echo
-}
-
-error() {
-  echo ; echo "${RED}${BOLD}${*}${RESET}" ; echo
-}
-
-success() {
-  echo ; echo "${GREEN}${BOLD}${*}${RESET}" ; echo
-}
-
-# Set directory
-export DOTFILES=$HOME/.dotfiles
+#!/usr/bin/env bash
 
 # Ask for password
 sudo -v
+
+# Export dotfiles directory
+export DOTFILES=$HOME/.dotfiles
 
 # Preinstall
 if ! hash zsh hub ag 2>/dev/null ; then
@@ -32,7 +14,7 @@ if ! hash zsh hub ag 2>/dev/null ; then
   elif [ `uname` == 'Linux' ]; then
     sudo apt-get install zsh hub silversearcher-ag
   else
-    error "zsh, hub and ag is required"
+    echo "zsh, hub and ag is required"
     exit
   fi
 fi
@@ -41,9 +23,9 @@ fi
 zsh_path=$(which zsh)
 
 if [ -z `grep "$zsh_path" /etc/shells` ]; then
-  info "Path to Zsh: $zsh_path. Enter your password to change default shell:"
+  echo "Path to Zsh: $zsh_path. Enter your password to change default shell:"
   grep -Fxq "$zsh_path" /etc/shells || sudo bash -c "echo $zsh_path >> /etc/shells"
-  chsh -s "$zsh_path" $USER || error "Cannot set zsh as default shell!"
+  chsh -s "$zsh_path" $USER || echo "Cannot set zsh as default shell!"
 fi
 
 # Installing oh-my-zsh
@@ -70,4 +52,4 @@ ln -fs $DOTFILES/.vimrc        $HOME/.vimrc
 ln -fs $DOTFILES/.zshrc        $HOME/.zshrc
 ln -fs $DOTFILES/.hyperterm.js $HOME/.hyperterm.js
 
-success "Dotfiles installed successfully! Please restart your terminal!"
+echo "Dotfiles installed successfully! Please restart your terminal!"
