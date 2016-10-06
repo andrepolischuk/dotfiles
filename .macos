@@ -270,8 +270,53 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
+# Disable iTerm tab close button
+defaults write com.googlecode.iterm2 HideTabCloseButton -bool true
+
+# Enable iTerm tab activity indicator
+defaults write com.googlecode.iterm2 HideActivityIndicator -bool false
+
+# Disable iTerm border
+defaults write com.googlecode.iterm2 UseBorder -bool false
+
+# Disable iTerm window number
+defaults write com.googlecode.iterm2 WindowNumber -bool false
+
+# Disable iTerm prompt on quit
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Enable iTerm job name
+defaults write com.googlecode.iterm2 JobName -bool true
+
+# Disable iTerm tab and tab numbers
+defaults write com.googlecode.iterm2 HideTab -bool true
+defaults write com.googlecode.iterm2 HideTabNumber -bool true
+
+# Disable iTerm dim mode
+defaults write com.googlecode.iterm2 DimOnlyText -bool false
+defaults write com.googlecode.iterm2 DimBackgroundWindows -bool false
+defaults write com.googlecode.iterm2 DimInactiveSplitPanes -bool false
+
+# Disable iTerm arrangement at startup
+defaults write com.googlecode.iterm2 OpenArrangementAtStartup -bool false
+
+# Disable iTerm pane titles
+defaults write com.googlecode.iterm2 ShowPaneTitles -bool false
+
+# Disable iTerm window size snap
+defaults write com.googlecode.iterm2 DisableWindowSizeSnap -bool true
+
+# Disable iTerm transparency
+defaults write com.googlecode.iterm2 DisableFullscreenTransparency -bool true
+
+# Enable clipboard access to iTerm
+defaults write com.googlecode.iterm2 AllowClipboardAccess -bool true
+
+# Enable iTerm tabs on fullscreen
+defaults write com.googlecode.iterm2 ShowFullScreenTabBar -bool true
+
 for app in "cfprefsd" "Dock" "Finder" "Google Chrome" "Mail" "Photos" \
-  "Safari" "Safari Technology Preview" "SystemUIServer"; do
+  "iTerm2", "Safari" "Safari Technology Preview" "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done
 
