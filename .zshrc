@@ -1,5 +1,6 @@
 # Setup zsh
 ZSH=$HOME/.oh-my-zsh
+DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(git github osx npm brew vagrant neat gitio zsh-autosuggestions zsh-syntax-highlighting)
 
