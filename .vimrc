@@ -2,6 +2,7 @@
 set nocompatible
 set nobackup
 set noswapfile
+set viminfo^=%
 
 " Formatting
 set nowrap
@@ -31,9 +32,6 @@ set clipboard+=unnamed
 set scrolloff=10
 set autoread
 
-" Remember info about open buffers on close
-set viminfo^=%
-
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
   let c = col(".")
@@ -48,20 +46,17 @@ autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 autocmd FocusGained,BufEnter * :silent! !
 
 " Aliases
-cnoreabbrev W w
-cnoreabbrev Q q!
 cnoreabbrev nt tabnew
 cnoreabbrev ag Ag
-cnoreabbrev ut UndotreeToggle
 
 " Encoding
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
 
 " Search
-set ignorecase
-set incsearch
 set hlsearch
+set incsearch
+set ignorecase
 
 " Shortcuts for moving between tabs
 map <S-Left> gT
@@ -108,14 +103,14 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " Languages
 Plugin 'elzr/vim-json'
   let g:vim_json_syntax_conceal = 0
-Plugin 'groenewege/vim-less'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
-Plugin 'othree/es.next.syntax.vim'
 Plugin 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled = 1
+Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
