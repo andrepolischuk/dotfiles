@@ -16,7 +16,7 @@ set preserveindent
 set nosmartindent
 set nocindent
 set list
-set listchars=tab:➛·,trail:·,nbsp:·,eol:¬
+set listchars=tab:➛·,trail:·,nbsp:·,eol:¬,extends:❯,precedes:❮
 
 " UI
 set number
@@ -71,15 +71,18 @@ map <S-Right> gt
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Plugins
+" General plugins
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-sleuth'
-Plugin 'ervandew/supertab'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'mbbill/undotree'
 Plugin 'rakr/vim-one'
+Plugin 'mbbill/undotree'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'ervandew/supertab'
+Plugin 'gregsexton/MatchTag'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
@@ -108,19 +111,14 @@ Plugin 'elzr/vim-json'
 Plugin 'groenewege/vim-less'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
-  let g:used_javascript_libs = 'underscore,react,flux,ramda'
 Plugin 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
-Plugin 'gavocanov/vim-js-indent'
 Plugin 'othree/es.next.syntax.vim'
-Plugin 'gregsexton/MatchTag'
 Plugin 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled = 1
-Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'ap/vim-css-color'
 Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'tpope/vim-surround'
 
 " Filetypes
 au BufRead,BufNewFile *.es6 set filetype=javascript
