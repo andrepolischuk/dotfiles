@@ -104,15 +104,14 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'elzr/vim-json'
   let g:vim_json_syntax_conceal = 0
 Plugin 'othree/yajs.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
+Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'plasticboy/vim-markdown'
   let g:vim_markdown_folding_disabled = 1
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
-Plugin 'JulesWang/css.vim'
 Plugin 'stephenway/postcss.vim'
 
 " Filetypes
