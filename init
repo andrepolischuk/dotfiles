@@ -45,11 +45,11 @@ fi
 [ -d ~/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Make symlinks
-ln -fs $DOTFILES/.aliases      $HOME/.aliases
-ln -fs $DOTFILES/.exports      $HOME/.exports
-ln -fs $DOTFILES/.gitconfig    $HOME/.gitconfig
-ln -fs $DOTFILES/.vimrc        $HOME/.vimrc
-ln -fs $DOTFILES/.zshrc        $HOME/.zshrc
-ln -fs $DOTFILES/.hyperterm.js $HOME/.hyperterm.js
+ln -fs $DOTFILES/.aliases   $HOME/.aliases
+ln -fs $DOTFILES/.exports   $HOME/.exports
+ln -fs $DOTFILES/.gitconfig $HOME/.gitconfig
+ln -fs $DOTFILES/.vimrc     $HOME/.vimrc
+ln -fs $DOTFILES/.zshrc     $HOME/.zshrc
+ln -fs $DOTFILES/.hyper.js  $HOME/.hyper.js
 
 echo "Dotfiles installed successfully! Please restart your terminal!"

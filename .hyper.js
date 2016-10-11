@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     'hypercwd',
     'hyperterm-blink',
-    'hyperterm-one-light'
+    'hyper-one-light'
   ],
   localPlugins: []
 };

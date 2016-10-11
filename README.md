@@ -23,7 +23,7 @@ You may set macOS defaults:
 
 ## Apps
 
-* [hyperterm][hyperterm]
+* [Hyper][hyper]
 * [zsh][zsh]
 * [oh-my-zsh][oh-my-zsh]
 * git
@@ -35,7 +35,7 @@ You may set macOS defaults:
 
 MIT
 
-[hyperterm]: https://hyperterm.org
+[hyper]: https://hyper.is
 [zsh]: http://www.zsh.org
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [hub]: https://github.com/github/hub
