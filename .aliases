@@ -1,4 +1,5 @@
 # Shell
+alias sudo='sudo '
 alias ..='cd ..;'
 alias ...='.. ..'
 alias ....='.. .. ..'
