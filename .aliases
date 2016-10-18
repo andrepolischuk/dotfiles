@@ -45,7 +45,7 @@ alias gpom='git push origin master'
 alias gpl='git pull'
 alias grh='git reset --hard'
 alias gst='git status'
-alias gt='git tag'
+alias gt='git tag --sort version:refname'
 
 # Tools
 alias get='curl -O -L'
