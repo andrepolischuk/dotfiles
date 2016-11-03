@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git github osx npm brew vagrant neat gitio zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git github osx npm brew vagrant min gitio zsh-autosuggestions zsh-syntax-highlighting)
 
 # Dotfiles path
 export DOTFILES=$HOME/.dotfiles

@@ -29,7 +29,7 @@ You may set macOS defaults:
 * git
 * [hub][hub]
 * vim
-* [neat zsh prompt][neat]
+* [min zsh prompt][min]
 
 ## License
 
@@ -39,4 +39,4 @@ MIT
 [zsh]: http://www.zsh.org
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [hub]: https://github.com/github/hub
-[neat]: https://github.com/andrepolischuk/neat
+[min]: https://github.com/andrepolischuk/min
