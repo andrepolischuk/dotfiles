@@ -45,10 +45,6 @@ autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 " Reload buf when focusing vim
 autocmd FocusGained,BufEnter * :silent! !
 
-" Aliases
-cnoreabbrev nt tabnew
-cnoreabbrev ag Ag
-
 " Encoding
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
@@ -57,22 +53,6 @@ set fileencoding=utf-8
 set hlsearch
 set incsearch
 set ignorecase
-
-" Disable Arrow keys
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-" Arrow key to navigate windows
-noremap <Down> <C-W>j
-noremap <Up> <C-W>k
-noremap <Left> <C-W>h
-noremap <Right> <C-W>l
 
 " Shortcuts for moving between tabs
 map <S-Left> gT

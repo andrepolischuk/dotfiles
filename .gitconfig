@@ -3,7 +3,5 @@
 	email = andre.polischuk@gmail.com
 [credential]
 	helper = osxkeychain
-[color]
-	ui = auto
 [core]
 	editor = vi
