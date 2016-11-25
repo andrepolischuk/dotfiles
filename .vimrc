@@ -17,7 +17,7 @@ set preserveindent
 set nosmartindent
 set nocindent
 set list
-set listchars=tab:➛·,trail:·,nbsp:·,eol:¬,extends:❯,precedes:❮
+set listchars=tab:➛·,trail:·,space:·,nbsp:·,eol:¬,extends:❯,precedes:❮
 
 " UI
 set number
