@@ -17,7 +17,7 @@ set preserveindent
 set nosmartindent
 set nocindent
 set list
-set listchars=tab:➛·,trail:·,space:·,nbsp:·,eol:¬,extends:❯,precedes:❮
+set listchars=tab:➛·,trail:·,space:·,nbsp:·,eol:¬,extends:⇢,precedes:⇠
 
 " UI
 set number
@@ -137,7 +137,7 @@ set background=light
 colorscheme one
 
 " Override colors
-hi Normal ctermbg=none
-hi CursorLine guibg=#eeeeee ctermbg=255 cterm=none
+hi Normal guibg=NONE ctermbg=NONE
+hi CursorLine guibg=#eeeeee ctermbg=255 cterm=NONE
 hi CursorLineNR guibg=#eeeeee ctermbg=255
-hi LineNr guifg=#c6c6c6 ctermfg=251 ctermbg=none
+hi LineNr guifg=#c6c6c6 ctermfg=251 ctermbg=NONE
