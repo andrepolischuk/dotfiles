@@ -74,6 +74,7 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
