@@ -1,6 +1,6 @@
 # .dotfiles
 
-> Dotfiles for shell, zsh, etc
+> Dotfiles for shell, zsh, macOS, etc
 
 ![](screenshot.png)
 
@@ -18,7 +18,7 @@ git config --global user.email "email@yoursite.com"
 You may set macOS defaults:
 
 ```sh
-~/.dotfiles/.macos
+~/.dotfiles/macos
 ```
 
 ## Apps
