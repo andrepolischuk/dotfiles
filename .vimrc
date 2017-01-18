@@ -32,16 +32,6 @@ set clipboard+=unnamed
 set scrolloff=10
 set autoread
 
-fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
-
-" Automatically clean trailing whitespaces on save
-autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
-
 " Reload buf when focusing vim
 autocmd FocusGained,BufEnter * :silent! !
 
