@@ -106,8 +106,9 @@ Plugin 'othree/es.next.syntax.vim'
 Plugin 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'plasticboy/vim-markdown'
-  let g:vim_markdown_folding_disabled = 1
+Plugin 'rhysd/vim-gfm-syntax'
+  let g:markdown_fenced_languages = ['sh', 'html', 'css', 'json', 'js=javascript']
+Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
