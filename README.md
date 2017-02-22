@@ -1,4 +1,4 @@
-# .dotfiles
+# dotfiles
 
 > Dotfiles for shell, zsh, macOS, etc
 
@@ -8,7 +8,7 @@
 
 ```sh
 # dotfiles
-git clone https://github.com/andrepolischuk/.dotfiles && ~/.dotfiles/init
+git clone https://github.com/andrepolischuk/dotfiles && ~/dotfiles/init
 
 # git config
 git config --global user.name "Your Name"
@@ -18,7 +18,7 @@ git config --global user.email "email@yoursite.com"
 You may set macOS defaults:
 
 ```sh
-~/.dotfiles/macos
+~/dotfiles/macos
 ```
 
 ## Apps
