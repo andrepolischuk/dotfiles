@@ -5,7 +5,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git github osx npm brew vagrant min gitio zsh-autosuggestions zsh-syntax-highlighting)
 
 # Dotfiles path
-export DOTFILES=$PWD
+export DOTFILES=$(dirname $(readlink ${(%):-%N}))
 
 # Add sourses
 source $DOTFILES/.exports
