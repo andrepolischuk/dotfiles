@@ -4,7 +4,13 @@
 sudo -v
 
 # Export dotfiles directory
-export DOTFILES=$HOME/.dotfiles
+init_dirname=$(dirname $0)
+
+if [[ $init_dirname == '.' ]]; then
+  export DOTFILES="$PWD"
+else
+  export DOTFILES="$PWD/$init_dirname"
+fi
 
 # Preinstall
 if ! hash zsh hub ag 2>/dev/null ; then
