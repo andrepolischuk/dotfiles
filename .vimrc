@@ -55,7 +55,6 @@ call vundle#begin()
 " General plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rakr/vim-one'
-Plugin 'mbbill/undotree'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
@@ -64,7 +63,6 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'terryma/vim-multiple-cursors'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
