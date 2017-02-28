@@ -44,10 +44,6 @@ set hlsearch
 set incsearch
 set ignorecase
 
-" Shortcuts for moving between tabs
-map <S-Left> gT
-map <S-Right> gt
-
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
