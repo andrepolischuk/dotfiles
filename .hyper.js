@@ -9,6 +9,7 @@ module.exports = {
         -webkit-font-smoothing: subpixel-antialiased !important;
       }
     `,
+    copyOnSelect: true,
   },
   plugins: [
     'hyper-one-light',
