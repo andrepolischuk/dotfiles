@@ -7,7 +7,7 @@ sudo -v
 sudo nvram SystemAudioVolume=" "
 
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array "en_GB" "ru_RU"
+defaults write NSGlobalDomain AppleLanguages -array "en-GB" "ru-RU"
 defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=RUB"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
