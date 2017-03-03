@@ -42,7 +42,6 @@ zsh_custom_plugins=~/.oh-my-zsh/custom/plugins
 
 if [ ! -d "$zsh_custom_plugins/min" ]; then
   git clone https://github.com/andrepolischuk/min $zsh_custom_plugins/min
-  git clone https://github.com/denysdovhan/gitio-zsh $zsh_custom_plugins/gitio
   git clone https://github.com/zsh-users/zsh-autosuggestions $zsh_custom_plugins/zsh-autosuggestions
   git clone https://github.com/zsh-users/zsh-syntax-highlighting $zsh_custom_plugins/zsh-syntax-highlighting
 fi
