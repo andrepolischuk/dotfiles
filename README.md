@@ -1,6 +1,6 @@
 # dotfiles
 
-> Dotfiles for shell, zsh, macOS, etc
+> Dotfiles for shell, zsh, vim, macOS, etc
 
 ![](screenshot.png)
 
@@ -31,6 +31,12 @@ You may set macOS defaults:
 * vim
 * [min zsh prompt][min]
 
+## Thanks to...
+
+* [Anton Shuvalov][a] and his [dotfiles][a-dotfiles] inspired me to create the same
+* [Denys Dovhan][denysdovhan] and his [dotfiles][denysdovhan-dotfiles]
+* [Mathias Bynens][mathiasbynens] and his [dotfiles][mathiasbynens-dotfiles] with macOS defaults
+
 ## License
 
 MIT
@@ -40,3 +46,12 @@ MIT
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [hub]: https://github.com/github/hub
 [min]: https://github.com/andrepolischuk/min
+
+[a]: https://github.com/A
+[a-dotfiles]: https://github/A/.dotfiles
+
+[denysdovhan]: https://github.com/denysdovhan
+[denysdovhan-dotfiles]: https://github.com/denysdovhan/dotfiles
+
+[mathiasbynens]: https://github.com/mathiasbynens
+[mathiasbynens-dotfiles]: https://github.com/mathiasbynens/dotfiles
