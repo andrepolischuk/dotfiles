@@ -8,7 +8,7 @@
 
 ```sh
 # dotfiles
-git clone https://github.com/andrepolischuk/dotfiles && ~/dotfiles/init
+git clone https://github.com/andrepolischuk/dotfiles && ~/dotfiles/init.sh
 
 # git config
 git config --global user.name "Your Name"
@@ -18,7 +18,7 @@ git config --global user.email "email@yoursite.com"
 You may set macOS defaults:
 
 ```sh
-~/dotfiles/macos
+~/dotfiles/macos.sh
 ```
 
 ## Apps
@@ -26,8 +26,8 @@ You may set macOS defaults:
 * [Hyper][hyper]
 * [zsh][zsh]
 * [oh-my-zsh][oh-my-zsh]
-* git
-* vim
+* [git][git]
+* [vim][vim]
 * [min zsh prompt][min]
 
 ## Thanks to...
@@ -43,6 +43,8 @@ MIT
 [hyper]: https://hyper.is
 [zsh]: http://www.zsh.org
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
+[git]: https://git-scm.com
+[vim]: http://www.vim.org
 [min]: https://github.com/andrepolischuk/min
 
 [a]: https://github.com/A
