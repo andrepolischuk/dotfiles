@@ -30,6 +30,21 @@ You may set macOS defaults:
 * [vim][vim]
 * [min zsh prompt][min]
 
+## Update
+
+You can run for update all apps:
+
+```sh
+~/dotfiles/update.sh
+```
+
+* dotfiles
+* zsh
+* zsh plugins
+* brew packages
+* vim plugins
+* global npm packages
+
 ## Thanks to...
 
 * [Anton Shuvalov][a] and his [dotfiles][a-dotfiles] inspired me to create the same
