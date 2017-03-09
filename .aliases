@@ -17,7 +17,6 @@ alias nk='npm link'
 alias no='npm outdated'
 
 # Git
-alias git='hub'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'

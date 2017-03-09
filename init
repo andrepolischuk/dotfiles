@@ -13,14 +13,14 @@ else
 fi
 
 # Preinstall
-if ! hash zsh hub ag 2>/dev/null ; then
+if ! hash git zsh vim ag 2>/dev/null ; then
   if [ `uname` == 'Darwin' ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install zsh hub the_silver_searcher
+    brew install git zsh vim the_silver_searcher
   elif [ `uname` == 'Linux' ]; then
-    sudo apt-get install zsh hub silversearcher-ag
+    sudo apt-get install git zsh vim silversearcher-ag
   else
-    echo "zsh, hub and ag is required"
+    echo "git, zsh, vim and ag is required"
     exit
   fi
 fi

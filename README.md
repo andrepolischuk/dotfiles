@@ -27,7 +27,6 @@ You may set macOS defaults:
 * [zsh][zsh]
 * [oh-my-zsh][oh-my-zsh]
 * git
-* [hub][hub]
 * vim
 * [min zsh prompt][min]
 
@@ -44,7 +43,6 @@ MIT
 [hyper]: https://hyper.is
 [zsh]: http://www.zsh.org
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
-[hub]: https://github.com/github/hub
 [min]: https://github.com/andrepolischuk/min
 
 [a]: https://github.com/A
