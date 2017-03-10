@@ -12,6 +12,9 @@ module.exports = {
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
     cursorShape: 'BEAM',
 
+    // set to true for blinking cursor
+    cursorBlink: true,
+
     // color of the text
     foregroundColor: '#fff',
 
@@ -94,8 +97,7 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-one-light',
-    'hypercwd',
-    'hyper-blink'
+    'hypercwd'
   ],
 
   // in development, you can create a directory under
