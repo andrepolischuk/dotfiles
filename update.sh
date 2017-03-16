@@ -9,12 +9,7 @@ cd $HOME/.oh-my-zsh
 git pull --rebase --stat origin master
 
 # Update zsh plugins
-for plugin in $(ls -1d $HOME/.oh-my-zsh/custom/plugins/*); do
-  if [ -z $(echo $plugin | grep example) ]; then
-    cd $plugin
-    git pull
-  fi
-done
+ls -1d $HOME/.oh-my-zsh/custom/plugins/* | xargs -I % bash -c 'cd %; git pull'
 
 # Update brew packages
 command -v brew >/dev/null 2>&1 && {
@@ -39,9 +34,6 @@ command -v npm >/dev/null 2>&1 && {
 }
 
 # Update vim plugins
-for plugin in $(ls -1d $HOME/.vim/bundle/*); do
-  cd $plugin
-  git pull
-done
+ls -1d $HOME/.vim/bundle/* | xargs -I % bash -c 'cd %; git pull'
 
 echo "Dotfiles updated successfully! Please restart your terminal!"
