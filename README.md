@@ -63,7 +63,7 @@ MIT
 [min]: https://github.com/andrepolischuk/min
 
 [a]: https://github.com/A
-[a-dotfiles]: https://github/A/.dotfiles
+[a-dotfiles]: https://github.com/A/.dotfiles
 
 [denysdovhan]: https://github.com/denysdovhan
 [denysdovhan-dotfiles]: https://github.com/denysdovhan/dotfiles
