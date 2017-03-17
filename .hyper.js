@@ -13,7 +13,7 @@ module.exports = {
     cursorShape: 'BEAM',
 
     // set to true for blinking cursor
-    cursorBlink: true,
+    cursorBlink: false,
 
     // color of the text
     foregroundColor: '#fff',
