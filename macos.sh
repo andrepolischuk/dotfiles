@@ -152,7 +152,7 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Avoid automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool false
+defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool false
