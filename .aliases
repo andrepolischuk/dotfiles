@@ -31,7 +31,7 @@ alias gmn='git merge --no-ff --no-commit'
 alias gp='git push'
 alias gpl='git pull'
 alias grh='git reset --hard'
-alias gst='git status --short'
+alias gst='git status --short --branch'
 alias gt='git tag --sort version:refname'
 
 # Tools
