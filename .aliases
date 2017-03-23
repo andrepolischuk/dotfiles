@@ -14,6 +14,7 @@ alias ns='npm start'
 alias nt='npm test'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nk='npm link'
+alias nv='npm version'
 alias no='npm outdated'
 
 # Git
