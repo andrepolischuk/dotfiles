@@ -1,7 +1,8 @@
 [user]
 	name = Andrey Polischuk
 	email = me@andrepolischuk.com
+	signingkey = D7287FB6F371003C
 [credential]
 	helper = osxkeychain
-[core]
-	editor = vi
+[commit]
+	gpgsign = true

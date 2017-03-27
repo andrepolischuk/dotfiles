@@ -57,4 +57,9 @@ ln -fs $DOTFILES/.vimrc     $HOME/.vimrc
 ln -fs $DOTFILES/.zshrc     $HOME/.zshrc
 ln -fs $DOTFILES/.hyper.js  $HOME/.hyper.js
 
+if [ -d $HOME/.gnupg ]; then
+  ln -fs $DOTFILES/gpg.conf       $HOME/.gnupg/gpg.conf
+  ln -fs $DOTFILES/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
+fi
+
 echo "Dotfiles installed successfully! Please restart your terminal!"
