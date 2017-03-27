@@ -35,10 +35,10 @@ if [ -z `grep "$zsh_path" /etc/shells` ]; then
 fi
 
 # Installing oh-my-zsh
-[ -d ~/.oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+[ -d $HOME/.oh-my-zsh ] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Installing oh-my-zsh plugins
-zsh_custom_plugins=~/.oh-my-zsh/custom/plugins
+zsh_custom_plugins=$HOME/.oh-my-zsh/custom/plugins
 
 if [ ! -d "$zsh_custom_plugins/min" ]; then
   git clone https://github.com/andrepolischuk/min $zsh_custom_plugins/min
@@ -47,7 +47,7 @@ if [ ! -d "$zsh_custom_plugins/min" ]; then
 fi
 
 # Installing vundle
-[ -d ~/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+[ -d $HOME/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 # Make symlinks
 ln -fs $DOTFILES/.aliases   $HOME/.aliases
