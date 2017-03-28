@@ -34,6 +34,7 @@ alias gpl='git pull'
 alias grh='git reset --hard'
 alias gst='git status --short --branch'
 alias gt='git tag --sort version:refname'
+alias gbc='git branch --merged | sed "s/* master//g" | xargs -I % bash -c "git branch -d %; git push origin :%"'
 
 # Tools
 alias get='curl -O -L -#'
