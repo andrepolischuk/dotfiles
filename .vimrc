@@ -1,6 +1,7 @@
 " General
 set nocompatible
 set nobackup
+set nowritebackup
 set noswapfile
 set viminfo^=%
 
@@ -31,6 +32,7 @@ set title
 set clipboard+=unnamed
 set scrolloff=10
 set autoread
+set colorcolumn=100
 
 " Reload buf when focusing vim
 autocmd FocusGained,BufEnter * :silent! !
