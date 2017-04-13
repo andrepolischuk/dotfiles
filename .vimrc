@@ -32,7 +32,10 @@ set title
 set clipboard+=unnamed
 set scrolloff=10
 set autoread
-set colorcolumn=100
+set colorcolumn=81
+
+" Color columns for git commit
+autocmd FileType gitcommit set colorcolumn=51,73
 
 " Reload buf when focusing vim
 autocmd FocusGained,BufEnter * :silent! !
