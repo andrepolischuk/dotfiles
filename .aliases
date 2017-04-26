@@ -40,3 +40,5 @@ alias gbc='git branch --merged | sed "s/* master//g" | xargs -I % bash -c "git b
 alias get='curl -O -L -#'
 alias myip='curl -s https://4.ifcfg.me'
 alias mylocalip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
+alias en='trans :en'
+alias ru='trans :ru'
