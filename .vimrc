@@ -86,7 +86,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_show_hidden = 1
   let g:ctrlp_open_new_file = 't'
   let g:ctrlp_match_window = 'order:ttb,max:20,results:20'
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore ".git" -g ""'
 
 " Languages
 Plugin 'elzr/vim-json'
