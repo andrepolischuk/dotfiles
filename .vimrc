@@ -88,6 +88,19 @@ Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_match_window = 'order:ttb,max:20,results:20'
   let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore ".git" -g ""'
 
+" Linting
+Plugin 'w0rp/ale'
+  let g:ale_sign_error = '!'
+  let g:ale_sign_warning = '!'
+  let g:ale_set_highlights = 0
+  let g:ale_lint_on_text_changed = 'never'
+
+if executable("standard")
+  let g:ale_linters = {'javascript': ['standard']}
+else
+  let g:ale_linters = {'javascript': ['eslint']}
+endif
+
 " Languages
 Plugin 'elzr/vim-json'
   let g:vim_json_syntax_conceal = 0
