@@ -16,6 +16,7 @@ alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nk='npm link'
 alias nv='npm version'
 alias no='npm outdated'
+alias nu='npm uninstall'
 
 # Git
 alias ga='git add'
