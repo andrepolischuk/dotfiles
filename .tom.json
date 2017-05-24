@@ -1,0 +1,9 @@
+{
+	"duration": 25,
+	"breakDuration": 5,
+	"shortcuts": {
+		"showWindow": "CommandOrControl+Alt+T",
+		"startTimer": "Enter",
+		"hideWindow": "Escape"
+	}
+}
