@@ -94,12 +94,9 @@ Plugin 'w0rp/ale'
   let g:ale_sign_warning = '!'
   let g:ale_set_highlights = 0
   let g:ale_lint_on_text_changed = 'never'
-
-if executable("standard")
-  let g:ale_linters = {'javascript': ['standard']}
-else
-  let g:ale_linters = {'javascript': ['eslint']}
-endif
+  if executable("standard")
+    let g:ale_linters = {'javascript': ['standard']}
+  endif
 
 " Languages
 Plugin 'elzr/vim-json'
