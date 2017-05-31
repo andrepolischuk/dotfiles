@@ -1,5 +1,5 @@
 {
-	"duration": "25",
+	"duration": 25,
 	"breakDuration": 5,
 	"shortcuts": {
 		"hideWindow": "Escape",
