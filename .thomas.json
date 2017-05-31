@@ -4,6 +4,6 @@
 	"shortcuts": {
 		"hideWindow": "Escape",
 		"showWindow": "CommandOrControl+Alt+T",
-		"startTimer": "Enter"
+		"startTimer": "CommandOrControl+Enter"
 	}
 }
