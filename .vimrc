@@ -5,6 +5,25 @@ set nowritebackup
 set noswapfile
 set viminfo^=%
 
+" Interface
+set number
+set cul
+set nostartofline
+set noshowcmd
+set noshowmode
+set noruler
+set tildeop
+set title
+set clipboard+=unnamed
+set scrolloff=10
+set hlsearch
+set incsearch
+set ignorecase
+set autoread
+autocmd FocusGained,BufEnter * :silent! !
+set colorcolumn=81
+autocmd FileType gitcommit set colorcolumn=51,73
+
 " Formatting
 set nowrap
 set backspace=2
@@ -19,41 +38,24 @@ set nosmartindent
 set nocindent
 set list
 set listchars=tab:——,trail:·,space:·,nbsp:·,eol:¬,extends:⇢,precedes:⇠
-
-" UI
-set number
-set cul
-set nostartofline
-set noshowcmd
-set noshowmode
-set noruler
-set tildeop
-set title
-set clipboard+=unnamed
-set scrolloff=10
-set autoread
-set colorcolumn=81
-
-" Color columns for git commit
-autocmd FileType gitcommit set colorcolumn=51,73
-
-" Reload buf when focusing vim
-autocmd FocusGained,BufEnter * :silent! !
-
-" Encoding
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
 
-" Search
-set hlsearch
-set incsearch
-set ignorecase
+" True colors
+if (empty($TMUX))
+  if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
-" Vundle
+" Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" General plugins
+" General
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rakr/vim-one'
 Plugin 'tpope/vim-sleuth'
@@ -113,27 +115,10 @@ Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 
-" Filetypes
-au BufRead,BufNewFile *.es6 set filetype=javascript
-au BufRead,BufNewFile *.soy set filetype=html
-
-" Vundle end
 call vundle#end()
 
-" Syntax
+" Syntax colors
 filetype plugin indent on
 syntax enable
-
-" Use true colors
-if (empty($TMUX))
-  if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
-
-" Color scheme
 set background=light
 colorscheme one
