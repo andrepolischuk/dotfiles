@@ -30,7 +30,6 @@ command -v apt-get >/dev/null 2>&1 && {
 # Update npm packages
 command -v npm >/dev/null 2>&1 && {
   npm -g outdated --parseable=true | cut -d : -f 4 | xargs -n 1 npm -g install
-  npm cache clean
 }
 
 # Update vim plugins
