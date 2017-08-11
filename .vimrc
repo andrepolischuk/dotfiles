@@ -71,9 +71,11 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
   set laststatus=2
+  set ttimeoutlen=0
   let g:airline_theme = 'one'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
+  let g:airline#extensions#ale#enabled = 0
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#tab_min_count = 2
   let g:airline#extensions#tabline#show_buffers = 0
