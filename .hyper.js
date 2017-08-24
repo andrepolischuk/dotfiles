@@ -1,7 +1,11 @@
 module.exports = {
   config: {
+    // Choose either `false` for receiving highly polished,
+    // or `true` for less polished but more frequent updates
+    canaryUpdates: true,
+
     // default font size in pixels for all tabs
-    fontSize: 13,
+    fontSize: 15,
 
     // font family with optional fallbacks
     fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
