@@ -26,6 +26,8 @@ autocmd FileType gitcommit set colorcolumn=51,73
 
 " Formatting
 set nowrap
+autocmd FileType markdown setlocal wrap
+autocmd FileType html setlocal wrap
 set backspace=2
 set tabstop=2
 set shiftwidth=2
@@ -66,6 +68,8 @@ Plugin 'ervandew/supertab'
 Plugin 'gregsexton/MatchTag'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'matze/vim-move'
+  let g:move_key_modifier = 'C'
 Plugin 'editorconfig/editorconfig-vim'
 
 " Airline
