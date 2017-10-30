@@ -5,5 +5,7 @@
 		"hideWindow": "Escape",
 		"showWindow": "CommandOrControl+Alt+T",
 		"startTimer": "CommandOrControl+Enter"
-	}
+	},
+	"trayIcon": false,
+	"progressBar": false
 }
