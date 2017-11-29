@@ -1,0 +1,27 @@
+# blacklist
+#
+# The contents of this file (containing a listing of additional domains in
+# 'hosts' file format) are appended to the unified hosts file during the
+# update process. For example, uncomment the following line to block
+# 'example.com':
+
+# 0.0.0.0 example.com
+
+0.0.0.0 google-analytics.com
+0.0.0.0 ssl.google-analytics.com
+0.0.0.0 www.google-analytics.l.google.com
+0.0.0.0 www.google-analytics.com
+0.0.0.0 yastatic.net
+0.0.0.0 clck.yandex.ru
+0.0.0.0 grade.market.yandex.ru
+0.0.0.0 mc.yandex.ru
+0.0.0.0 mc.webvisor.com
+0.0.0.0 mc.webvisor.org
+0.0.0.0 stat.livejournal.com
+0.0.0.0 analytics.twitter.com
+0.0.0.0 kraken.rambler.ru
+0.0.0.0 counter.rambler.ru
+0.0.0.0 www.tns-counter.ru
+0.0.0.0 bael5.variti.ch
+0.0.0.0 bael5.variti.net
+0.0.0.0 d31j93rd8oukbv.cloudfront.net
