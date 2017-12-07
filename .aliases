@@ -8,7 +8,6 @@ alias rf='rm -rf'
 
 # Npm
 alias ni='npm install'
-alias nls='npm ls'
 alias nr='npm run'
 alias ns='npm start'
 alias nt='npm test'
@@ -17,6 +16,7 @@ alias nk='npm link'
 alias nv='npm version'
 alias no='npm outdated'
 alias nu='npm uninstall'
+alias nls='npm ls --depth 0'
 
 # Git
 alias ga='git add'
