@@ -5,6 +5,7 @@ alias ...='.. ..'
 alias ....='.. .. ..'
 alias md='mkdir -p'
 alias rf='rm -rf'
+alias bed='pmset sleepnow'
 
 # Npm
 alias ni='npm install'
