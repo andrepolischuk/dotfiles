@@ -15,16 +15,12 @@ ls -1d $HOME/.oh-my-zsh/custom/plugins/* | xargs -I % bash -c 'cd %; git pull'
 command -v brew >/dev/null 2>&1 && {
   brew update
   brew upgrade
-  brew prune
-  brew cleanup
 }
 
 # Update ubuntu packages
 command -v apt-get >/dev/null 2>&1 && {
   sudo apt-get update
   sudo apt-get upgrade -y
-  sudo apt-get autoremove -y
-  sudo apt-get autoclean -y
 }
 
 # Update npm packages
@@ -35,4 +31,7 @@ command -v npm >/dev/null 2>&1 && {
 # Update vim plugins
 ls -1d $HOME/.vim/bundle/* | xargs -I % bash -c 'cd %; git pull'
 
-echo "Dotfiles updated successfully! Please restart your terminal!"
+# Upgrade macOS
+sudo softwareupdate -ia
+
+echo "Updating completed successfully! Please restart your terminal!"
