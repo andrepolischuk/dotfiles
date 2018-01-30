@@ -75,6 +75,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'matze/vim-move'
   let g:move_key_modifier = 'C'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'junegunn/goyo.vim'
+  nnoremap <C-g> :Goyo<CR>
 
 " Airline
 Plugin 'vim-airline/vim-airline'
