@@ -44,6 +44,10 @@ set listchars=tab:——,trail:·,space:·,nbsp:·,eol:¬,extends:⇢,precedes:�
 set encoding=utf-8 nobomb
 set fileencoding=utf-8
 
+" Moving
+noremap j gj
+noremap k gk
+
 " True colors
 if (empty($TMUX))
   if (has("nvim"))
