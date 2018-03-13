@@ -122,7 +122,7 @@ Plugin 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'rhysd/vim-gfm-syntax'
-  let g:markdown_fenced_languages = ['sh', 'html', 'css', 'json', 'js=javascript']
+  let g:markdown_fenced_languages = ['sh', 'html', 'css', 'json', 'yaml', 'js=javascript']
 Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
