@@ -51,7 +51,6 @@ fi
 
 # Make symlinks
 ln -fs $DOTFILES/.aliases   $HOME/.aliases
-ln -fs $DOTFILES/.exports   $HOME/.exports
 ln -fs $DOTFILES/.gitconfig $HOME/.gitconfig
 ln -fs $DOTFILES/.vimrc     $HOME/.vimrc
 ln -fs $DOTFILES/.zshrc     $HOME/.zshrc
