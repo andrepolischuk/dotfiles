@@ -127,6 +127,8 @@ Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
+Plugin 'reasonml-editor/vim-reason-plus'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 

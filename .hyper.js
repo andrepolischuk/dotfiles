@@ -2,14 +2,22 @@ module.exports = {
   config: {
     // Choose either "stable" for receiving highly polished,
     // or "canary" for less polished but more frequent updates
-    updateChannel: 'stable',
+    updateChannel: 'canary',
 
     // default font size in pixels for all tabs
     fontSize: 15,
 
     // font family with optional fallbacks
     fontFamily: 'Fira Code, Menlo, DejaVu Sans Mono, Consolas, Lucida Console, monospace',
-    uiFontFamily: 'Fira Code, Menlo, DejaVu Sans Mono, Consolas, Lucida Console, monospace',
+
+    // default font weight: 'normal' or 'bold'
+    fontWeight: 'normal',
+
+    // font weight for bold characters: 'normal' or 'bold'
+    fontWeightBold: 'bold',
+
+    // line height as a relative unit
+    lineHeight: 1.1,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -18,7 +26,7 @@ module.exports = {
     cursorShape: 'BEAM',
 
     // set to true for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',

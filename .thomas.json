@@ -1,6 +1,6 @@
 {
-  "duration": 27,
-  "breakDuration": 3,
+  "duration": 18,
+  "breakDuration": 2,
   "shortcuts": {
     "hideWindow": "Escape",
     "showWindow": "CommandOrControl+Alt+T",
