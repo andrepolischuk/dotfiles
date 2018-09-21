@@ -112,6 +112,10 @@ Plugin 'w0rp/ale'
   if executable("standard")
     let g:ale_linters = {'javascript': ['standard', 'flow']}
   endif
+Plugin 'prettier/vim-prettier'
+  if executable("prettier")
+    autocmd BufWritePre *.js,*.jsx,*.json,*.md Prettier
+  endif
 
 " Languages
 Plugin 'elzr/vim-json'
