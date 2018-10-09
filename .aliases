@@ -8,6 +8,7 @@ alias rf='rm -rf'
 alias f='find . -name'
 alias bed='pmset sleepnow'
 alias path='echo -e ${PATH//:/\\n}'
+alias run='open -a'
 
 # Npm
 alias ni='npm install'

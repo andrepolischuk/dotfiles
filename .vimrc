@@ -112,10 +112,6 @@ Plugin 'w0rp/ale'
   if executable("standard")
     let g:ale_linters = {'javascript': ['standard', 'flow']}
   endif
-Plugin 'prettier/vim-prettier'
-  if executable("prettier")
-    autocmd BufWritePre *.js,*.jsx,*.json,*.md Prettier
-  endif
 
 " Languages
 Plugin 'elzr/vim-json'
@@ -127,6 +123,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'rhysd/vim-gfm-syntax'
   let g:markdown_fenced_languages = ['sh', 'html', 'css', 'json', 'yaml', 'js=javascript']
+Plugin 'jxnblk/vim-mdx-js'
 Plugin 'othree/html5.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
