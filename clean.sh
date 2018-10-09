@@ -6,7 +6,6 @@ killall node || true
 # Remove brew artifacts
 command -v brew >/dev/null 2>&1 && {
   brew cleanup
-  brew cask cleanup
   brew prune
 }
 
