@@ -49,3 +49,18 @@ alias mylocalip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){
 alias en='trans :en'
 alias ru='trans :ru'
 alias ag='ag --stats'
+
+# Apps
+alias chromium='open -a Chromium'
+alias chrome='open -a Google\ Chrome'
+alias canary='open -a Google\ Chrome\ Canary'
+alias safari='open -a Safari'
+alias firefox='open -a Firefox'
+alias nightly='open -a Firefox\ Nightly'
+alias yandex='open -a Yandex'
+alias mail='open -a Mail'
+alias notes='open -a Notes'
+alias cal='open -a Calendar'
+alias term='open -a iTerm'
+alias telegram='open -a Telegram'
+alias vm='VBoxManage startvm'
