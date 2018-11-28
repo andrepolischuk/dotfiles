@@ -49,6 +49,7 @@ alias mylocalip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){
 alias en='trans :en'
 alias ru='trans :ru'
 alias ag='ag --stats'
+alias rand='date +%s | md5 | base64 | head -c 32'
 
 # Apps
 alias chromium='open -a Chromium'
