@@ -21,6 +21,7 @@ fi
 cd $hosts_dir
 
 # Patch /etc/hosts
+pip3 install --user -r requirements.txt
 python3 updateHostsFile.py -a -f -r -e fakenews gambling porn social
 
 rm -rf $hosts_dir
