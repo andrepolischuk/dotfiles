@@ -32,6 +32,6 @@ command -v npm >/dev/null 2>&1 && {
 ls -1d $HOME/.vim/bundle/* | xargs -I % bash -c 'cd %; git pull'
 
 # Upgrade macOS
-sudo softwareupdate -ia
+sudo softwareupdate -iaR
 
 echo "Updating completed successfully! Please restart your terminal!"
