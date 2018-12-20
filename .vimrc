@@ -69,7 +69,6 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
-Plugin 'gregsexton/MatchTag'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'matze/vim-move'
@@ -130,6 +129,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 
