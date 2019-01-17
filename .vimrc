@@ -128,7 +128,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
