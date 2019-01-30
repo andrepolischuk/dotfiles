@@ -48,6 +48,11 @@ set fileencoding=utf-8
 noremap j gj
 noremap k gk
 
+" Files
+let g:netrw_liststyle = 3
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
 " True colors
 if (empty($TMUX))
   if (has("nvim"))
@@ -75,7 +80,7 @@ Plugin 'matze/vim-move'
   let g:move_key_modifier = 'C'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'junegunn/goyo.vim'
-  nnoremap <C-g> :Goyo<CR>
+  nnoremap <Space>g :Goyo<CR>
 
 " Airline
 Plugin 'vim-airline/vim-airline'
@@ -95,6 +100,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " Search
 Plugin 'rking/ag.vim'
   let g:ag_highlight = 1
+  nnoremap <Space>s :Ag<CR>
+Plugin 'wsdjeg/FlyGrep.vim'
+  nnoremap <Space>/ :FlyGrep<CR>
 Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_show_hidden = 1
