@@ -49,9 +49,9 @@ noremap j gj
 noremap k gk
 
 " Files
+autocmd FileType netrw setlocal bufhidden=delete
+let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
 
 " True colors
 if (empty($TMUX))
@@ -99,8 +99,9 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Search
 Plugin 'rking/ag.vim'
+  nnoremap <Space>s :Ag<Space>
   let g:ag_highlight = 1
-  nnoremap <Space>s :Ag<CR>
+  let g:ag_working_path_mode = "r"
 Plugin 'wsdjeg/FlyGrep.vim'
   nnoremap <Space>/ :FlyGrep<CR>
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -108,7 +109,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_show_hidden = 1
   let g:ctrlp_open_new_file = 't'
   let g:ctrlp_match_window = 'order:ttb,max:20,results:20'
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  " let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Linting
 Plugin 'w0rp/ale'
@@ -138,6 +140,7 @@ Plugin 'stephenway/postcss.vim'
 Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'kchmck/vim-coffee-script'
+  let g:yats_host_keyword = 1
 
 call vundle#end()
 
