@@ -66,3 +66,7 @@ alias cal='open -a Calendar'
 alias term='open -a iTerm'
 alias telegram='open -a Telegram'
 alias vm='VBoxManage startvm'
+
+# Scripts
+alias update='$DOTFILES/update.sh'
+alias clean='$DOTFILES/clean.sh'
