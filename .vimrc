@@ -140,6 +140,7 @@ Plugin 'reasonml-editor/vim-reason-plus'
 Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'kchmck/vim-coffee-script'
   let g:yats_host_keyword = 1
+Plugin 'jparise/vim-graphql'
 
 call vundle#end()
 

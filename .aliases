@@ -20,6 +20,7 @@ alias nk='npm link'
 alias nv='npm version'
 alias no='npm outdated'
 alias nu='npm uninstall'
+alias nup='npm update'
 alias nls='npm ls --depth 0'
 
 # Git
@@ -68,5 +69,5 @@ alias telegram='open -a Telegram'
 alias vm='VBoxManage startvm'
 
 # Scripts
-alias update='$DOTFILES/update.sh'
-alias clean='$DOTFILES/clean.sh'
+alias update="$DOTFILES/update.sh"
+alias clean="$DOTFILES/clean.sh"
