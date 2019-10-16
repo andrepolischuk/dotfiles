@@ -137,7 +137,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'kchmck/vim-coffee-script'
   let g:yats_host_keyword = 1
 Plugin 'jparise/vim-graphql'
