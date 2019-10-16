@@ -20,7 +20,7 @@ export PATH="./node_modules/.bin:$PATH"
 ZSH="$HOME/.oh-my-zsh"
 DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
-plugins=(git npm brew vagrant min zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git npm yarn brew vagrant min zsh-autosuggestions zsh-syntax-highlighting)
 
 # Add sourses
 source "$ZSH/oh-my-zsh.sh"

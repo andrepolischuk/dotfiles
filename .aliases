@@ -23,6 +23,20 @@ alias nu='npm uninstall'
 alias nup='npm update'
 alias nls='npm ls --depth 0'
 
+# Yarn
+alias y='yarn'
+alias yi='yarn install'
+alias ya='yarn add'
+alias ys='yarn start'
+alias yt='yarn test'
+alias yf='rm -rf node_modules && yarn install'
+alias yk='yarn link'
+alias yv='yarn version'
+alias yo='yarn outdated'
+alias yu='yarn remove'
+alias yup='yarn upgrade --latest'
+alias yls='yarn list --depth 0'
+
 # Git
 alias ga='git add'
 alias gb='git branch'
