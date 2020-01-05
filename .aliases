@@ -82,6 +82,8 @@ alias cal='open -a Calendar'
 alias term='open -a iTerm'
 alias telegram='open -a Telegram'
 alias vm='VBoxManage startvm'
+alias ios='open -a Simulator'
+alias android='$HOME/Library/Android/sdk/tools/emulator -avd'
 
 # Scripts
 alias update="$DOTFILES/update.sh"
