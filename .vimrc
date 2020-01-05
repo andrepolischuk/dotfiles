@@ -141,6 +141,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'kchmck/vim-coffee-script'
   let g:yats_host_keyword = 1
 Plugin 'jparise/vim-graphql'
+Plugin 'keith/swift.vim'
 
 call vundle#end()
 
