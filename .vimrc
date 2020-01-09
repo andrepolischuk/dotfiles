@@ -81,6 +81,18 @@ Plugin 'matze/vim-move'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'junegunn/goyo.vim'
   nnoremap <Space>g :Goyo<CR>
+Plugin 'preservim/nerdtree'
+  nnoremap <Space>f :NERDTreeToggle<CR>
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  let NERDTreeMinimalUI = 1
+  let NERDTreeShowHidden = 1
+  let NERDTreeIgnore = ['\.git$', '\.vim$', '\~$']
+  let g:NERDTreeMapOpenSplit = "h"
+  let g:NERDTreeMapOpenVSplit = "v"
+  let g:NERDTreeMapOpenInTab = "t"
+  let g:NERDTreeMapActivateNode = "<F4>"
+  let g:NERDTreeMapPreview = "<F3>"
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " Airline
 Plugin 'vim-airline/vim-airline'
@@ -137,7 +149,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'kchmck/vim-coffee-script'
   let g:yats_host_keyword = 1
 Plugin 'jparise/vim-graphql'
