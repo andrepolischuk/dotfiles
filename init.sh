@@ -46,8 +46,8 @@ if [ ! -d "$zsh_custom_plugins/min" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting $zsh_custom_plugins/zsh-syntax-highlighting
 fi
 
-# Installing vundle
-[ -d $HOME/.vim ] || git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+# Installing vim plug
+[ -d $HOME/.vim ] || curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Make symlinks
 ln -fs $DOTFILES/.aliases   $HOME/.aliases

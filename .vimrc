@@ -6,6 +6,7 @@ set noswapfile
 set viminfo^=%
 
 " Interface
+set hidden
 set number
 set cul
 set nostartofline
@@ -64,24 +65,22 @@ if (empty($TMUX))
 endif
 
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " General
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'rakr/vim-one'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-surround'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'ervandew/supertab'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'matze/vim-move'
+Plug 'rakr/vim-one'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tomtom/tcomment_vim'
+Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
+Plug 'airblade/vim-gitgutter'
+Plug 'matze/vim-move'
   let g:move_key_modifier = 'C'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'junegunn/goyo.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'junegunn/goyo.vim'
   nnoremap <Space>g :Goyo<CR>
-Plugin 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
   nnoremap <Space>f :NERDTreeToggle<CR>
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   let NERDTreeMinimalUI = 1
@@ -92,11 +91,11 @@ Plugin 'preservim/nerdtree'
   let g:NERDTreeMapOpenInTab = "t"
   let g:NERDTreeMapActivateNode = "<F4>"
   let g:NERDTreeMapPreview = "<F3>"
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
   set laststatus=2
   set ttimeoutlen=0
   let g:airline_theme = 'one'
@@ -110,13 +109,13 @@ Plugin 'vim-airline/vim-airline-themes'
   let g:airline#extensions#tabline#show_tab_nr = 0
 
 " Search
-Plugin 'rking/ag.vim'
+Plug 'rking/ag.vim'
   nnoremap <Space>s :Ag<Space>
   let g:ag_highlight = 1
   let g:ag_working_path_mode = "r"
-Plugin 'wsdjeg/FlyGrep.vim'
+Plug 'wsdjeg/FlyGrep.vim'
   nnoremap <Space>/ :FlyGrep<CR>
-Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_show_hidden = 1
   let g:ctrlp_open_new_file = 't'
@@ -124,7 +123,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Linting
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
   let g:ale_sign_error = '!'
   let g:ale_sign_warning = '?'
   let g:ale_set_highlights = 0
@@ -134,28 +133,48 @@ Plugin 'w0rp/ale'
   endif
 
 " Languages
-Plugin 'elzr/vim-json'
+Plug 'elzr/vim-json'
   let g:vim_json_syntax_conceal = 0
-Plugin 'othree/yajs.vim'
-Plugin 'othree/es.next.syntax.vim'
-Plugin 'mxw/vim-jsx'
+Plug 'othree/yajs.vim'
+Plug 'othree/es.next.syntax.vim'
+Plug 'mxw/vim-jsx'
   let g:jsx_ext_required = 0
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'rhysd/vim-gfm-syntax'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'rhysd/vim-gfm-syntax'
   let g:markdown_fenced_languages = ['sh', 'html', 'css', 'json', 'yaml', 'js=javascript']
-Plugin 'jxnblk/vim-mdx-js'
-Plugin 'othree/html5.vim'
-Plugin 'groenewege/vim-less'
-Plugin 'ap/vim-css-color'
-Plugin 'stephenway/postcss.vim'
-Plugin 'reasonml-editor/vim-reason-plus'
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'kchmck/vim-coffee-script'
+Plug 'jxnblk/vim-mdx-js'
+Plug 'othree/html5.vim'
+Plug 'groenewege/vim-less'
+Plug 'ap/vim-css-color'
+Plug 'stephenway/postcss.vim'
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'kchmck/vim-coffee-script'
   let g:yats_host_keyword = 1
-Plugin 'jparise/vim-graphql'
-Plugin 'keith/swift.vim'
+Plug 'jparise/vim-graphql'
+Plug 'keith/swift.vim'
 
-call vundle#end()
+" IDE
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+
+call plug#end()
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 " Syntax colors
 filetype plugin indent on
