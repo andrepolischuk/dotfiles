@@ -47,7 +47,10 @@ if [ ! -d "$zsh_custom_plugins/min" ]; then
 fi
 
 # Installing vim plug
-[ -d $HOME/.vim ] || curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ -d $HOME/.vim ]; then
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  ln -fs $DOTFILES/coc-settings.json $HOME/.vim/coc-settings.json
+fi
 
 # Make symlinks
 ln -fs $DOTFILES/.aliases   $HOME/.aliases
