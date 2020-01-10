@@ -1,3 +1,8 @@
 {
-  "coc.preferences.jumpCommand": "tabedit"
+  "coc.preferences.jumpCommand": "tabedit",
+  "diagnostic.errorSign": "!",
+  "diagnostic.warningSign": "?",
+  "diagnostic.infoSign": "i",
+  "diagnostic.hintSign": "*",
+  "tsserver.enableJavascript": false
 }

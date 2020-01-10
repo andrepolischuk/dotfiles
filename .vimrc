@@ -162,6 +162,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   nmap <silent> gr <Plug>(coc-references)
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'amiralies/coc-flow', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
