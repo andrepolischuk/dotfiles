@@ -51,7 +51,7 @@ noremap k gk
 
 " Files
 autocmd FileType netrw setlocal bufhidden=delete
-let g:netrw_menu = 0
+let loaded_netrwPlugin = 1
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
@@ -87,11 +87,11 @@ Plug 'preservim/nerdtree'
   let NERDTreeMinimalUI = 1
   let NERDTreeShowHidden = 1
   let NERDTreeIgnore = ['\.git$', '\.vim$', '\~$']
+  let g:NERDTreeHijackNetrw = 0
   let g:NERDTreeMapOpenSplit = "h"
   let g:NERDTreeMapOpenVSplit = "v"
   let g:NERDTreeMapOpenInTab = "t"
-  let g:NERDTreeMapActivateNode = "<F4>"
-  let g:NERDTreeMapPreview = "<F3>"
+  let g:NERDTreeMapPreview = "p"
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Airline
