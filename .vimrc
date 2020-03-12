@@ -93,6 +93,7 @@ Plug 'preservim/nerdtree'
   let g:NERDTreeMapOpenInTab = "t"
   let g:NERDTreeMapPreview = "p"
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jamessan/vim-gnupg'
 
 " Airline
 Plug 'vim-airline/vim-airline'
