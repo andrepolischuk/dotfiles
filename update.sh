@@ -29,7 +29,7 @@ command -v npm >/dev/null 2>&1 && {
 }
 
 # Update vim plugins
-ls -1d $HOME/.vim/bundle/* | xargs -I % bash -c 'cd %; git pull'
+ls -1d $HOME/.vim/plugged/* | xargs -I % bash -c 'cd %; git pull'
 
 # Upgrade macOS
 sudo softwareupdate -iaR
