@@ -24,6 +24,8 @@ set autoread
 autocmd FocusGained,BufEnter * :silent! !
 set colorcolumn=81
 autocmd FileType gitcommit set colorcolumn=51,73
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " Formatting
 set nowrap
@@ -79,8 +81,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'matze/vim-move'
   let g:move_key_modifier = 'C'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/goyo.vim'
-  nnoremap <Space>g :Goyo<CR>
 Plug 'preservim/nerdtree'
   nnoremap <Space>f :NERDTreeToggle<CR>
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -115,8 +115,6 @@ Plug 'rking/ag.vim'
   nnoremap <Space>s :Ag<Space>
   let g:ag_highlight = 1
   let g:ag_working_path_mode = "r"
-Plug 'wsdjeg/FlyGrep.vim'
-  nnoremap <Space>/ :FlyGrep<CR>
 Plug 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_show_hidden = 1
@@ -126,6 +124,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " Linting
 Plug 'w0rp/ale'
+  nnoremap ]r :ALENextWrap<CR>
+  nnoremap [r :ALEPreviousWrap<CR>
   let g:ale_sign_error = '!'
   let g:ale_sign_warning = '?'
   let g:ale_set_highlights = 0
@@ -155,6 +155,7 @@ Plug 'kchmck/vim-coffee-script'
   let g:yats_host_keyword = 1
 Plug 'jparise/vim-graphql'
 Plug 'keith/swift.vim'
+Plug 'alampros/vim-styled-jsx'
 
 " IDE
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
