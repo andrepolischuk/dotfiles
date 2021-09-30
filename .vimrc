@@ -72,6 +72,11 @@ call plug#begin('~/.vim/plugged')
 
 " General
 Plug 'rakr/vim-one'
+Plug 'kat0h/vim-auto-color-switcher'
+  let g:auto_color_switcher#command={
+    \ 'light': 'call SetTheme("light")',
+    \ 'dark' : 'call SetTheme("dark")'
+    \}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
@@ -183,5 +188,13 @@ endfunction
 " Syntax colors
 filetype plugin indent on
 syntax enable
-set background=light
 colorscheme one
+
+function SetTheme(theme)
+  if a:theme == 'light'
+    set background=light
+  else
+    set background=dark
+  endif
+  highlight Normal guibg=NONE ctermbg=NONE
+endfunction
