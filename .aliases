@@ -9,6 +9,8 @@ alias f='find . -name'
 alias bed='pmset sleepnow'
 alias path='echo -e ${PATH//:/\\n}'
 alias run='open -a'
+alias copy='pbcopy'
+alias paste='pbpaste'
 
 # Npm
 alias ni='npm install'
@@ -66,6 +68,7 @@ alias en='trans -I :en'
 alias ru='trans -I :ru'
 alias ag='ag --stats'
 alias rand='date +%s | md5 | base64 | head -c 32'
+alias imgur='imgur-screenshot'
 
 # Apps
 alias chromium='open -a Chromium'
