@@ -8,6 +8,7 @@ set viminfo^=%
 " Interface
 set hidden
 set number
+" set scl=yes
 set cul
 set nostartofline
 set noshowcmd
@@ -22,15 +23,16 @@ set incsearch
 set ignorecase
 set autoread
 autocmd FocusGained,BufEnter * :silent! !
-set colorcolumn=81
-autocmd FileType gitcommit set colorcolumn=51,73
+set colorcolumn=0
+" set colorcolumn=81
+" autocmd FileType gitcommit set colorcolumn=51,73
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " Formatting
 set nowrap
-autocmd FileType markdown setlocal wrap
-autocmd FileType html setlocal wrap
+autocmd FileType markdown setlocal wrap linebreak breakindent
+autocmd FileType html setlocal wrap linebreak breakindent
 set backspace=2
 set tabstop=2
 set shiftwidth=2
@@ -91,6 +93,7 @@ Plug 'preservim/nerdtree'
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
   let NERDTreeMinimalUI = 1
   let NERDTreeShowHidden = 1
+  let NERDTreeSortHiddenFirst = 1
   let NERDTreeIgnore = ['\.git$', '\.vim$', '\~$']
   let g:NERDTreeHijackNetrw = 0
   let g:NERDTreeMapOpenSplit = "h"
@@ -109,6 +112,7 @@ Plug 'vim-airline/vim-airline-themes'
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
   let g:airline#extensions#ale#enabled = 0
+  let g:airline#extensions#coc#enabled = 0
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#tab_min_count = 2
   let g:airline#extensions#tabline#show_buffers = 0
@@ -161,6 +165,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'jparise/vim-graphql'
 Plug 'keith/swift.vim'
 Plug 'alampros/vim-styled-jsx'
+Plug 'dart-lang/dart-vim-plugin'
 
 " IDE
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -171,6 +176,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'amiralies/coc-flow', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
@@ -189,6 +195,7 @@ endfunction
 filetype plugin indent on
 syntax enable
 colorscheme one
+set background=light
 
 function SetTheme(theme)
   if a:theme == 'light'
