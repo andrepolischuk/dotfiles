@@ -57,8 +57,6 @@ ln -fs $DOTFILES/.aliases   $HOME/.aliases
 ln -fs $DOTFILES/.gitconfig $HOME/.gitconfig
 ln -fs $DOTFILES/.vimrc     $HOME/.vimrc
 ln -fs $DOTFILES/.zshrc     $HOME/.zshrc
-ln -fs $DOTFILES/.hyper.js  $HOME/.hyper.js
-ln -fs $DOTFILES/.thomas.json  $HOME/.thomas.json
 
 if [ -d $HOME/.gnupg ]; then
   ln -fs $DOTFILES/gpg.conf       $HOME/.gnupg/gpg.conf

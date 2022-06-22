@@ -23,7 +23,6 @@ You may set macOS defaults:
 
 ## Apps
 
-* [Hyper][hyper]
 * [zsh][zsh]
 * [oh-my-zsh][oh-my-zsh]
 * [git][git]
@@ -55,7 +54,6 @@ You can run for update all apps:
 
 MIT
 
-[hyper]: https://hyper.is
 [zsh]: http://www.zsh.org
 [oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
 [git]: https://git-scm.com
