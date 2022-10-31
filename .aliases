@@ -57,8 +57,8 @@ alias gr='git reset'
 alias gs='git show'
 alias gst='git status --short --branch'
 alias gt='git tag --sort version:refname'
-alias gbc='git branch --merged | sed "s/* master//g" | xargs -I % bash -c "git branch -d %; git push origin :%"'
-alias gpldeep='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+alias gbdm='git branch --merged | sed "s/* master//g" | xargs -I % bash -c "git branch -d %; git push origin :%"'
+alias gpld='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 # Tools
 alias get='curl -O -L -#'
