@@ -8,6 +8,8 @@ set viminfo^=%
 " Interface
 set hidden
 set number
+set laststatus=0
+set signcolumn=yes
 " set scl=yes
 set cul
 set nostartofline
@@ -102,22 +104,17 @@ Plug 'preservim/nerdtree'
   let g:NERDTreeMapPreview = "p"
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jamessan/vim-gnupg'
-
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-  set laststatus=2
-  set ttimeoutlen=0
-  let g:airline_theme = 'one'
-  let g:airline_left_sep = ''
-  let g:airline_right_sep = ''
-  let g:airline#extensions#ale#enabled = 0
-  let g:airline#extensions#coc#enabled = 0
-  let g:airline#extensions#tabline#enabled = 1
-  let g:airline#extensions#tabline#tab_min_count = 2
-  let g:airline#extensions#tabline#show_buffers = 0
-  let g:airline#extensions#tabline#fnamemod = ':t'
-  let g:airline#extensions#tabline#show_tab_nr = 0
+Plug 'powerman/vim-plugin-ruscmd'
+Plug 'itchyny/lightline.vim'
+  let g:lightline = {
+    \ 'colorscheme': 'one',
+    \ 'tab': {
+    \ 'active': [ 'filename' ],
+    \ 'inactive': [ 'filename' ] },
+    \ 'tabline': {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ [ '' ] ] }
+    \ }
 
 " Search
 Plug 'rking/ag.vim'
