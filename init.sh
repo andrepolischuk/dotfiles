@@ -53,10 +53,11 @@ if [ -d $HOME/.vim ]; then
 fi
 
 # Make symlinks
-ln -fs $DOTFILES/.aliases   $HOME/.aliases
-ln -fs $DOTFILES/.gitconfig $HOME/.gitconfig
-ln -fs $DOTFILES/.vimrc     $HOME/.vimrc
-ln -fs $DOTFILES/.zshrc     $HOME/.zshrc
+ln -fs $DOTFILES/.aliases         $HOME/.aliases
+ln -fs $DOTFILES/.gitconfig       $HOME/.gitconfig
+ln -fs $DOTFILES/.vimrc           $HOME/.vimrc
+ln -fs $DOTFILES/.zshrc           $HOME/.zshrc
+ln -fs $DOTFILES/.curl-format.txt $HOME/.curl-format.txt
 
 if [ -d $HOME/.gnupg ]; then
   ln -fs $DOTFILES/gpg.conf       $HOME/.gnupg/gpg.conf

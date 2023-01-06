@@ -69,6 +69,7 @@ alias ru='trans -I :ru'
 alias ag='ag --stats'
 alias rand='date +%s | md5 | base64 | head -c 32'
 alias imgur='imgur-screenshot'
+alias curltime='curl -w "@$HOME/.curl-format.txt" -o /dev/null -s'
 
 # Apps
 alias chromium='open -a Chromium'
