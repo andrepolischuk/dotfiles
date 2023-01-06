@@ -105,6 +105,8 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jamessan/vim-gnupg'
 Plug 'powerman/vim-plugin-ruscmd'
+Plug 'junegunn/goyo.vim'
+  nnoremap <Space>g :Goyo<CR>
 Plug 'itchyny/lightline.vim'
   let g:lightline = {
     \ 'colorscheme': 'one',
