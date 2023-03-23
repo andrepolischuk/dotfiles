@@ -15,7 +15,7 @@ fi
 # Preinstall
 if ! hash git zsh vim ag 2>/dev/null ; then
   if [ `uname` == 'Darwin' ]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew install git zsh vim the_silver_searcher
   elif [ `uname` == 'Linux' ]; then
     sudo apt-get install git zsh vim silversearcher-ag
