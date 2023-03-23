@@ -7,8 +7,8 @@ sudo -v
 sudo nvram SystemAudioVolume=" "
 
 # Set language and text formats
-defaults write NSGlobalDomain AppleLanguages -array "en-GB" "ru-RU"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=RUB"
+defaults write NSGlobalDomain AppleLanguages -array "en-US" "ru-RU"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=RUB"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
@@ -165,149 +165,107 @@ sudo ln -sf "/applications/xcode.app/contents/developer/applications/simulator.a
 
 # Safari restore session
 defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
-defaults write com.apple.SafariTechnologyPreview AlwaysRestoreSessionAtLaunch -bool true
 
 # Safari privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-defaults write com.apple.SafariTechnologyPreview UniversalSearchEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview SuppressSearchSuggestions -bool true
 
 # Show the full URL in the address bar (note: this still hides the scheme)
 defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-defaults write com.apple.SafariTechnologyPreview ShowFullURLInSmartSearchField -bool true
 
 # Press Tab to highlight each item on a web page
 defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
-defaults write com.apple.SafariTechnologyPreview WebKitTabToLinksPreferenceKey -bool true
-defaults write com.apple.SafariTechnologyPreview com.apple.SafariTechnologyPreview.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
 
 # New windows open with: Empty Page
 defaults write com.apple.Safari NewWindowBehavior -int 1
-defaults write com.apple.SafariTechnologyPreview NewWindowBehavior -int 1
 
 # New tabs open with: Empty Page
 defaults write com.apple.Safari NewTabBehavior -int 1
-defaults write com.apple.SafariTechnologyPreview NewTabBehavior -int 1
 
 # Set Safari’s home page to `about:blank` for faster loading
 defaults write com.apple.Safari HomePage -string "about:blank"
-defaults write com.apple.SafariTechnologyPreview HomePage -string "about:blank"
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-defaults write com.apple.SafariTechnologyPreview AutoOpenSafeDownloads -bool false
 
 # Open pages in tabs instead of windows: automatically
 defaults write com.apple.Safari TabCreationPolicy -int 1
-defaults write com.apple.SafariTechnologyPreview TabCreationPolicy -int 1
 
 # Don't make new tabs active
 defaults write com.apple.Safari OpenNewTabsInFront -bool false
-defaults write com.apple.SafariTechnologyPreview OpenNewTabsInFront -bool false
 
 # Command-clicking a link creates tabs
 defaults write com.apple.Safari CommandClickMakesTabs -bool true
-defaults write com.apple.SafariTechnologyPreview CommandClickMakesTabs -bool true
 
 # Avoid hitting the Backspace key to go to the previous page in history
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview com.apple.SafariTechnologyPreview.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool false
 
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar-v2 -bool false
-defaults write com.apple.SafariTechnologyPreview ShowFavoritesBar-v2 -bool false
 
 # Hide Safari’s tab bar by default
 defaults write com.apple.Safari AlwaysShowTabBar -bool false
-defaults write com.apple.SafariTechnologyPreview AlwaysShowTabBar -bool false
 
 # Hide Safari’s favorites under the search
 defaults write com.apple.Safari ShowFavoritesUnderSmartSearchField -bool false
-defaults write com.apple.SafariTechnologyPreview ShowFavoritesUnderSmartSearchField -bool false
 
 # Hide Status Bar
 defaults write com.apple.Safari ShowStatusBar -bool false
 defaults write com.apple.Safari ShowStatusBarInFullScreen -bool false
-defaults write com.apple.SafariTechnologyPreview ShowStatusBar -bool false
-defaults write com.apple.SafariTechnologyPreview ShowStatusBarInFullScreen -bool false
 
 # Hide Safari’s sidebar in Top Sites
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
-defaults write com.apple.SafariTechnologyPreview ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
-defaults write com.apple.SafariTechnologyPreview DebugSnapshotsUpdatePolicy -int 2
 
 # Enable the Develop menu and the Web Inspector in Safari
 defaults write com.apple.Safari IncludeDevelopMenu -bool true
 defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-defaults write com.apple.SafariTechnologyPreview IncludeDevelopMenu -bool true
-defaults write com.apple.SafariTechnologyPreview WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.SafariTechnologyPreview com.apple.SafariTechnologyPreview.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Disable continuous spellchecking
 defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview WebContinuousSpellCheckingEnabled -bool false
 
 # Disable auto-correct
 defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview WebAutomaticSpellingCorrectionEnabled -bool false
 
 # Set AutoFill
 defaults write com.apple.Safari AutoFillFromAddressBook -bool false
-defaults write com.apple.Safari AutoFillPasswords -bool false
+defaults write com.apple.Safari AutoFillPasswords -bool true
 defaults write com.apple.Safari AutoFillCreditCardData -bool false
 defaults write com.apple.Safari AutoFillMiscellaneousForms -bool false
-defaults write com.apple.SafariTechnologyPreview AutoFillFromAddressBook -bool false
-defaults write com.apple.SafariTechnologyPreview AutoFillPasswords -bool false
-defaults write com.apple.SafariTechnologyPreview AutoFillCreditCardData -bool false
-defaults write com.apple.SafariTechnologyPreview AutoFillMiscellaneousForms -bool false
 
 # Warn about fraudulent websites
 defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
-defaults write com.apple.SafariTechnologyPreview WarnAboutFraudulentWebsites -bool true
 
 # Disable plug-ins
 defaults write com.apple.Safari WebKitPluginsEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview WebKitPluginsEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview com.apple.SafariTechnologyPreview.ContentPageGroupIdentifier.WebKit2PluginsEnabled -bool false
 
 # Disable Java
 defaults write com.apple.Safari WebKitJavaEnabled -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview WebKitJavaEnabled -bool false
-defaults write com.apple.SafariTechnologyPreview com.apple.SafariTechnologyPreview.ContentPageGroupIdentifier.WebKit2JavaEnabled -bool false
 
 # Block pop-up windows
 defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically -bool false
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
-defaults write com.apple.SafariTechnologyPreview WebKitJavaScriptCanOpenWindowsAutomatically -bool false
-defaults write com.apple.SafariTechnologyPreview com.apple.SafariTechnologyPreview.ContentPageGroupIdentifier.WebKit2JavaScriptCanOpenWindowsAutomatically -bool false
 
 # Disable location services
 defaults write com.apple.Safari SafariGeolocationPermissionPolicy -int 0
-defaults write com.apple.SafariTechnologyPreview SafariGeolocationPermissionPolicy -int 0
 
 # Enable “Do Not Track”
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
-defaults write com.apple.SafariTechnologyPreview SendDoNotTrackHTTPHeader -bool true
 
 # Update extensions automatically
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
-defaults write com.apple.SafariTechnologyPreview InstallExtensionUpdatesAutomatically -bool true
 
 # Don't even ask about the push notifications
 defaults write com.apple.Safari CanPromptForPushNotifications -bool false
-defaults write com.apple.SafariTechnologyPreview CanPromptForPushNotifications -bool false
 
 # Disable preload top hit
 defaults write com.apple.Safari PreloadTopHit -bool false
-defaults write com.apple.SafariTechnologyPreview PreloadTopHit -bool false
 
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
