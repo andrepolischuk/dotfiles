@@ -138,9 +138,6 @@ Plug 'w0rp/ale'
   let g:ale_sign_warning = '?'
   let g:ale_set_highlights = 0
   let g:ale_lint_on_text_changed = 'never'
-  if executable("standard")
-    let g:ale_linters = {'javascript': ['standard', 'flow']}
-  endif
 
 " Languages
 Plug 'elzr/vim-json'
@@ -174,7 +171,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   nmap <silent> gr <Plug>(coc-references)
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-Plug 'amiralies/coc-flow', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
