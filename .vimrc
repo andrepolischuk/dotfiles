@@ -35,6 +35,7 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 set nowrap
 autocmd FileType markdown setlocal wrap linebreak breakindent
 autocmd FileType html setlocal wrap linebreak breakindent
+autocmd FileType text setlocal wrap linebreak breakindent
 set backspace=2
 set tabstop=2
 set shiftwidth=2
