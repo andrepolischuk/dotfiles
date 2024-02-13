@@ -19,7 +19,7 @@ set noruler
 set tildeop
 set title
 set clipboard+=unnamed
-set scrolloff=10
+set scrolloff=999
 set hlsearch
 set incsearch
 set ignorecase
