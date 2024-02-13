@@ -24,6 +24,7 @@ alias no='npm outdated'
 alias nu='npm uninstall'
 alias nup='npm update'
 alias nls='npm ls --depth 0'
+alias nrf="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 
 # Yarn
 alias y='yarn'
@@ -38,6 +39,7 @@ alias yo='yarn outdated'
 alias yu='yarn remove'
 alias yup='yarn upgrade --latest'
 alias yls='yarn list --depth 0'
+alias yrf="find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;"
 
 # Git
 alias ga='git add'
@@ -88,6 +90,7 @@ alias telegram='open -a Telegram'
 alias vm='VBoxManage startvm'
 alias ios='open -a Simulator'
 alias android='$HOME/Library/Android/sdk/tools/emulator -avd'
+alias python="python3"
 
 # Scripts
 alias update="$DOTFILES/update.sh"
