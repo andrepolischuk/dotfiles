@@ -8,6 +8,7 @@ set viminfo^=%
 " Interface
 set hidden
 set number
+set showtabline=0
 set laststatus=0
 set signcolumn=yes
 " set scl=yes
@@ -106,16 +107,6 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jamessan/vim-gnupg'
 Plug 'powerman/vim-plugin-ruscmd'
-Plug 'itchyny/lightline.vim'
-  let g:lightline = {
-    \ 'colorscheme': 'one',
-    \ 'tab': {
-    \ 'active': [ 'filename' ],
-    \ 'inactive': [ 'filename' ] },
-    \ 'tabline': {
-    \ 'left': [ [ 'tabs' ] ],
-    \ 'right': [ [ '' ] ] }
-    \ }
 
 " Search
 Plug 'rking/ag.vim'
