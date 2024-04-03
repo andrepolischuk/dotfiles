@@ -1,0 +1,39 @@
+{
+    "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.accessibilitySupport": "off",
+    "window.systemColorTheme": "auto",
+    "editor.stickyScroll.enabled": false,
+    "workbench.startupEditor": "none",
+    "workbench.preferredLightColorTheme": "Quiet Light",
+    "window.autoDetectColorScheme": true,
+    "window.zoomLevel": 0.65,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.5,
+    "editor.cursorStyle": "line",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "line",
+    "eslint.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "eslint.codeActionsOnSave.rules": null,
+    "gigacode.common.wholeLineReplacement": true,
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss",
+        "sass",
+        "scss"
+    ],
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Quiet Light",
+    "workbench.editor.showTabs": "none",
+    "workbench.statusBar.visible": false,
+    "workbench.iconTheme": null,
+    "editor.semanticTokenColorCustomizations": {}
+}

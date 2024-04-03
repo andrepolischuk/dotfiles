@@ -47,9 +47,11 @@ if [ ! -d "$zsh_custom_plugins/min" ]; then
 fi
 
 # Installing vim plug
-if [ -d $HOME/.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  ln -fs $DOTFILES/coc-settings.json $HOME/.vim/coc-settings.json
+vim_config=$HOME/.vim
+
+if [ -d $vim_config ]; then
+  curl -fLo $vim_config/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  ln -fs $DOTFILES/coc-settings.json $vim_config/coc-settings.json
 fi
 
 # Make symlinks
@@ -59,9 +61,17 @@ ln -fs $DOTFILES/.vimrc           $HOME/.vimrc
 ln -fs $DOTFILES/.zshrc           $HOME/.zshrc
 ln -fs $DOTFILES/.curl-format.txt $HOME/.curl-format.txt
 
-if [ -d $HOME/.gnupg ]; then
-  ln -fs $DOTFILES/gpg.conf       $HOME/.gnupg/gpg.conf
-  ln -fs $DOTFILES/gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
+gnupg_config=$HOME/.gnupg
+
+if [ -d $gnupg_config ]; then
+  ln -fs $DOTFILES/gpg.conf       $gnupg_config/gpg.conf
+  ln -fs $DOTFILES/gpg-agent.conf $gnupg_config/gpg-agent.conf
+fi
+
+vscode_config=$HOME/Library/Application\ Support/Code/User
+
+if [ -d "$vscode_config" ]; then
+  ln -fs $DOTFILES/vscode.json "$vscode_config/settings.json"
 fi
 
 echo "Dotfiles installed successfully! Please restart your terminal!"
