@@ -7,7 +7,7 @@ set viminfo^=%
 
 " Interface
 set hidden
-set number
+set nonumber
 set showtabline=0
 set laststatus=0
 set signcolumn=yes

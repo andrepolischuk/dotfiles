@@ -70,8 +70,6 @@ alias gpld='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD
 alias get='curl -O -L -#'
 alias myip='curl -s https://ifconfig.co'
 alias mylocalip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
-alias en='trans -I :en'
-alias ru='trans -I :ru'
 alias ag='ag --stats'
 alias rnd='date +%s | md5 | base64 | head -c 32'
 alias imgur='imgur-screenshot'

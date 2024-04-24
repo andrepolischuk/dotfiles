@@ -30,10 +30,16 @@
         "sass",
         "scss"
     ],
-    "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Quiet Light",
     "workbench.editor.showTabs": "none",
     "workbench.statusBar.visible": false,
     "workbench.iconTheme": null,
-    "editor.semanticTokenColorCustomizations": {}
+    "editor.semanticTokenColorCustomizations": {},
+    "cSpell.language": "en,ru",
+    "workbench.activityBar.location": "hidden",
+    "update.showReleaseNotes": false,
+    "editor.lineNumbers": "off",
+    "editor.scrollbar.verticalScrollbarSize": 5,
+    "editor.scrollbar.horizontalScrollbarSize": 5,
+    "editor.scrollbar.horizontal": "hidden"
 }
