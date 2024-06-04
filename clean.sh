@@ -21,7 +21,7 @@ command -v yarn >/dev/null 2>&1 && {
 
 # Remove npm artifacts
 command -v npm >/dev/null 2>&1 && {
-  npm cache clean -f
+  sudo npm cache clean -f
 }
 
 # Remove node modules
