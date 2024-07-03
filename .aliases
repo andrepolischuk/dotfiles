@@ -75,16 +75,6 @@ alias rnd='date +%s | md5 | base64 | head -c 32'
 alias imgur='imgur-screenshot'
 alias curltime='curl -w "@$HOME/.curl-format.txt" -o /dev/null -s'
 alias serve='npx http-server --port 3000'
-
-# Apps
-alias chromium='open -a Chromium'
-alias chrome='open -a Google\ Chrome'
-alias safari='open -a Safari'
-alias firefox='open -a Firefox'
-alias mail='open -a Mail'
-alias cal='open -a Calendar'
-alias term='open -a iTerm'
-alias tg='open -a Telegram'
 alias python="python3"
 
 # Scripts
