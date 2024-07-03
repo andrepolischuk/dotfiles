@@ -147,7 +147,6 @@ Plug 'stephenway/postcss.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'jparise/vim-graphql'
 Plug 'alampros/vim-styled-jsx'
-Plug 'dart-lang/dart-vim-plugin'
 
 " IDE
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -157,7 +156,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   nmap <silent> gr <Plug>(coc-references)
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-Plug 'iamcco/coc-flutter', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
