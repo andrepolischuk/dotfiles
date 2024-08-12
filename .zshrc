@@ -16,7 +16,8 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-export PATH=$(pyenv root)/shims:$PATH
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$(pyenv root)/shims:$PATH"
 
 # Setup zsh
 ZSH="$HOME/.oh-my-zsh"

@@ -68,10 +68,4 @@ if [ -d $gnupg_config ]; then
   ln -fs $DOTFILES/gpg-agent.conf $gnupg_config/gpg-agent.conf
 fi
 
-vscode_config=$HOME/Library/Application\ Support/Code/User
-
-if [ -d "$vscode_config" ]; then
-  ln -fs $DOTFILES/vscode.json "$vscode_config/settings.json"
-fi
-
 echo "Dotfiles installed successfully! Please restart your terminal!"
