@@ -1,6 +1,6 @@
 [user]
 	name = Andrey Polischuk
-	email = me@andrepolischuk.com
+	email = a@polischuk.xyz
 	signingkey = D7287FB6F371003C
 [credential]
 	helper = osxkeychain

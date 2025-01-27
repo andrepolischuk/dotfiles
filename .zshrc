@@ -19,6 +19,10 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$(pyenv root)/shims:$PATH"
 
+# Setup $CPATH
+export CPATH="/opt/homebrew/include:$CPATH"
+export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
+
 # Setup zsh
 ZSH="$HOME/.oh-my-zsh"
 DISABLE_UPDATE_PROMPT="true"
