@@ -324,7 +324,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Disable the all too sensitive backswipe on trackpads
 defaults write org.chromium.Chromium AppleEnableSwipeNavigateWithScrolls -bool false
 
-for app in "cfprefsd" "Dock" "Finder" "Chromium" "Mail" "Photos" "Safari" "Safari Technology Preview" "SystemUIServer"; do
+for app in "cfprefsd" "Dock" "Finder" "Chromium" "Mail" "Photos" "Safari" "SystemUIServer"; do
   killall "${app}" &> /dev/null
 done
 

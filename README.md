@@ -1,6 +1,6 @@
 # dotfiles
 
-> Dotfiles for shell, zsh, vim, macOS, etc
+> Dotfiles for bash, vim, macOS, etc
 
 ![](screenshot.png)
 
@@ -8,63 +8,31 @@
 
 ```sh
 # dotfiles
-git clone https://github.com/andrepolischuk/dotfiles && ~/dotfiles/init.sh
+git clone https://github.com/andrepolischuk/dotfiles && cd dotfiles && ./init.sh
 
 # git config
 git config --global user.name "Your Name"
 git config --global user.email "email@yoursite.com"
 ```
 
-You may set macOS defaults:
+You may install Homebrew formulae:
 
 ```sh
-~/dotfiles/macos.sh
+./brew.sh
 ```
 
-## Apps
-
-* [zsh][zsh]
-* [oh-my-zsh][oh-my-zsh]
-* [git][git]
-* [vim][vim]
-* [min zsh prompt][min]
-
-## Update
-
-You can run for update all apps:
+And set some macOS defaults:
 
 ```sh
-~/dotfiles/update.sh
+./macos.sh
 ```
-
-* dotfiles
-* zsh
-* zsh plugins
-* brew packages
-* vim plugins
-* global npm packages
 
 ## Thanks to...
 
-* [Anton Shuvalov][a] and his [dotfiles][a-dotfiles] inspired me to create the same
-* [Denys Dovhan][denysdovhan] and his [dotfiles][denysdovhan-dotfiles]
-* [Mathias Bynens][mathiasbynens] and his [dotfiles][mathiasbynens-dotfiles] with macOS defaults
+* [Anton Shuvalov](https://github.com/A) and his [dotfiles](https://github.com/A/.dotfiles) inspired me to create the same
+* [Denys Dovhan](https://github.com/denysdovhan) and his [dotfiles](https://github.com/denysdovhan/dotfiles)
+* [Mathias Bynens](https://github.com/mathiasbynens) and his [dotfiles](https://github.com/mathiasbynens/dotfiles) with macOS defaults
 
 ## License
 
 MIT
-
-[zsh]: http://www.zsh.org
-[oh-my-zsh]: https://github.com/robbyrussell/oh-my-zsh
-[git]: https://git-scm.com
-[vim]: http://www.vim.org
-[min]: https://github.com/andrepolischuk/min
-
-[a]: https://github.com/A
-[a-dotfiles]: https://github.com/A/.dotfiles
-
-[denysdovhan]: https://github.com/denysdovhan
-[denysdovhan-dotfiles]: https://github.com/denysdovhan/dotfiles
-
-[mathiasbynens]: https://github.com/mathiasbynens
-[mathiasbynens-dotfiles]: https://github.com/mathiasbynens/dotfiles

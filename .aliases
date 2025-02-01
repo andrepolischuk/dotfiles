@@ -3,14 +3,28 @@ alias sudo='sudo '
 alias ..='cd ..;'
 alias ...='.. ..'
 alias ....='.. .. ..'
+alias ~="cd ~"
+alias -- -="cd - > /dev/null"
+alias l="ls -lF --color"
+alias la="ls -lAF --color"
+alias lsd="ls -lF --color | grep --color=never '^d'"
+alias ls="command ls --color"
 alias md='mkdir -p'
 alias rf='rm -rf'
 alias f='find . -name'
-alias bed='pmset sleepnow'
+alias bedtime='pmset sleepnow'
 alias path='echo -e ${PATH//:/\\n}'
-alias run='open -a'
 alias copy='pbcopy'
 alias paste='pbpaste'
+
+# Update
+alias update='brew update; brew cleanup; npm install npm -g; npm update -g; sudo npm cache clean -f; yarn cache clean; sudo softwareupdate -ia'
+
+# Tools
+alias get='curl -O -L -#'
+alias ag='ag --stats'
+alias serve='npx http-server --port 3000'
+alias python="python3"
 
 # Npm
 alias ni='npm install'
@@ -65,18 +79,3 @@ alias gst='git status --short --branch'
 alias gt='git tag --sort version:refname'
 alias gbdm='git branch --merged | sed "s/* master//g" | xargs -I % bash -c "git branch -d %; git push origin :%"'
 alias gpld='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
-
-# Tools
-alias get='curl -O -L -#'
-alias myip='curl -s https://ifconfig.co'
-alias mylocalip='ifconfig | sed -En "s/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p"'
-alias ag='ag --stats'
-alias rnd='date +%s | md5 | base64 | head -c 32'
-alias imgur='imgur-screenshot'
-alias curltime='curl -w "@$HOME/.curl-format.txt" -o /dev/null -s'
-alias serve='npx http-server --port 3000'
-alias python="python3"
-
-# Scripts
-alias update="$DOTFILES/update.sh"
-alias clean="$DOTFILES/clean.sh"
