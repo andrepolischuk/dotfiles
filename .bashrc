@@ -11,6 +11,11 @@ export LC_TYPE=en_US.UTF-8
 export EDITOR='vim'
 export MANPAGER='less -X';
 
+# Append to the history file, increase bash history size
+shopt -s histappend
+export HISTSIZE=32768
+export HISTFILESIZE="$HISTSIZE"
+
 # Setup $PATH
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
