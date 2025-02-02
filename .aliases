@@ -18,7 +18,7 @@ alias copy='pbcopy'
 alias paste='pbpaste'
 
 # Update
-alias update='brew update; brew cleanup; sudo npm update -g; sudo npm cache clean -f; yarn cache clean; sudo softwareupdate -ia'
+alias update='brew update; brew upgrade; brew cleanup; vim +PlugUpdate +qall; vim +PlugClean +qall; sudo npm update -g; sudo npm cache clean -f; yarn cache clean; sudo softwareupdate -ia'
 
 # Tools
 alias get='curl -O -L -#'
