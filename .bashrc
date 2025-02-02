@@ -29,7 +29,7 @@ export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1='→ \033[1m\W\033[0m$(git_branch): '
+export PS1='→ \[\e[1m\]\W\[\e[0m\]$(git_branch): '
 export PS2='... '
 
 # Disable "default interactive shell is now zsh" warning on macOS
