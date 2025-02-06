@@ -15,6 +15,7 @@ export MANPAGER='less -X';
 shopt -s histappend
 export HISTSIZE=32768
 export HISTFILESIZE="$HISTSIZE"
+export PROMPT_COMMAND="history -a; history -n"
 
 # Setup $PATH
 export PATH="/usr/local/bin:$PATH"
