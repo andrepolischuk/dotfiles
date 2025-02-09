@@ -7,15 +7,15 @@ set viminfo^=%
 
 " Interface
 set hidden
-set nonumber
-set showtabline=0
+set number
+set showtabline=1
 set laststatus=0
 set signcolumn=yes
 " set scl=yes
 set cul
 set nostartofline
 set noshowcmd
-set noshowmode
+set showmode
 set noruler
 set tildeop
 set title
@@ -78,11 +78,6 @@ call plug#begin('~/.vim/plugged')
 
 " General
 Plug 'rakr/vim-one'
-Plug 'kat0h/vim-auto-color-switcher'
-  let g:auto_color_switcher#command={
-    \ 'light': 'call SetTheme("light")',
-    \ 'dark' : 'call SetTheme("dark")'
-    \}
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
@@ -179,12 +174,8 @@ filetype plugin indent on
 syntax enable
 colorscheme one
 set background=light
-
-function SetTheme(theme)
-  if a:theme == 'light'
-    set background=light
-  else
-    set background=dark
-  endif
-  highlight Normal guibg=NONE ctermbg=NONE
-endfunction
+highlight Normal guibg=NONE ctermbg=NONE
+highlight TabLine guibg=NONE ctermbg=NONE guifg=#abb2bf ctermfg=145
+highlight TabLineFill guibg=NONE ctermbg=NONE
+highlight TabLineSel guibg=#e0e0e0 ctermbg=253 guifg=#494b53 ctermfg=23
+highlight StatusLineNC guibg=#494b53 ctermbg=23 guifg=#e0e0e0 ctermfg=253

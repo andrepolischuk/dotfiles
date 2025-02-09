@@ -3,16 +3,13 @@ alias sudo='sudo '
 alias ..='cd ..;'
 alias ...='.. ..'
 alias ....='.. .. ..'
-alias ~="cd ~"
-alias -- -="cd - > /dev/null"
-alias l="ls -lF --color"
-alias la="ls -lAF --color"
-alias lsd="ls -lF --color | grep --color=never '^d'"
-alias ls="command ls --color"
+alias ~='cd ~'
+alias -- -='cd - > /dev/null'
+alias ll='ls -lhF'
+alias la='ls -lAhF'
 alias md='mkdir -p'
 alias rf='rm -rf'
 alias f='find . -name'
-alias bedtime='pmset sleepnow'
 alias path='echo -e ${PATH//:/\\n}'
 alias copy='pbcopy'
 alias paste='pbpaste'
@@ -22,6 +19,7 @@ alias update='brew update; brew upgrade; brew cleanup; vim +PlugUpdate +qall; vi
 
 # Tools
 alias get='curl -O -L -#'
+alias less='less -X'
 alias ag='ag --stats'
 alias serve='npx http-server --port 3000'
 alias python="python3"
