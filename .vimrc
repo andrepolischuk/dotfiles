@@ -8,7 +8,6 @@ set viminfo^=%
 " Interface
 set hidden
 set number
-set showtabline=1
 set laststatus=0
 set signcolumn=yes
 " set scl=yes
@@ -31,6 +30,25 @@ set colorcolumn=0
 " autocmd FileType gitcommit set colorcolumn=51,73
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+" Tabline
+set showtabline=1
+set tabline=%!TabLine()
+function! TabLine()
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+    let bufnr = tabpagebuflist(i)[0]
+    let tabname = fnamemodify(bufname(bufnr), ':t')
+    let modified = getbufvar(bufnr, '&modified') ? '+' : ''
+    if i == tabpagenr()
+      let s .= '%#TabLineSel#' . ' ' . tabname . modified . ' '
+    else
+      let s .= '%#TabLine#' . ' ' . tabname . modified . ' '
+    endif
+  endfor
+  let s .= '%#TabLineFill#' . ' '
+  return s
+endfunction
 
 " Formatting
 set nowrap
@@ -159,9 +177,9 @@ Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call <SID>ShowDocumentation()<CR>
 
-function! s:show_documentation()
+function! s:ShowDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
