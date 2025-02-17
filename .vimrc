@@ -177,9 +177,9 @@ Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 call plug#end()
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>ShowDocumentation()<CR>
+nnoremap <silent> K :call <SID>showDocumentation()<CR>
 
-function! s:ShowDocumentation()
+function! s:showDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
