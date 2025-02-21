@@ -20,7 +20,6 @@ alias update='brew update; brew upgrade; brew cleanup; vim +PlugUpdate +qall; vi
 # Tools
 alias get='curl -O -L -#'
 alias less='less -X'
-alias ag='ag --stats'
 alias serve='npx http-server --port 3000'
 alias python="python3"
 

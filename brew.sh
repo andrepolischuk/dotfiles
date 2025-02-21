@@ -20,7 +20,6 @@ brew install \
   nginx \
   openconnect \
   pinentry-mac \
-  the_silver_searcher \
   vim \
   yarn
 

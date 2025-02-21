@@ -82,14 +82,14 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
 " True colors
-if (empty($TMUX))
-  if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+" if (empty($TMUX))
+"   if (has("nvim"))
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"   endif
+"   if (has("termguicolors"))
+"     set termguicolors
+"   endif
+" endif
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -122,10 +122,7 @@ Plug 'jamessan/vim-gnupg'
 Plug 'powerman/vim-plugin-ruscmd'
 
 " Search
-Plug 'rking/ag.vim'
-  nnoremap <Space>s :Ag<Space>
-  let g:ag_highlight = 1
-  let g:ag_working_path_mode = "r"
+Plug 'vim-scripts/grep.vim'
 Plug 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_show_hidden = 1
@@ -192,8 +189,16 @@ filetype plugin indent on
 syntax enable
 colorscheme one
 set background=light
-highlight Normal guibg=NONE ctermbg=NONE
+
+" Normalize colors
+highlight Normal guibg=NONE ctermbg=NONE guifg=#494b53 ctermfg=239
+highlight SignColumn guibg=NONE ctermbg=NONE
+highlight CursorLine guibg=#f0f0f0 ctermbg=255
+highlight CursorLineNr guibg=#f0f0f0 ctermbg=255 guifg=#494b53 ctermfg=239
 highlight TabLine guibg=NONE ctermbg=NONE guifg=#abb2bf ctermfg=145
 highlight TabLineFill guibg=NONE ctermbg=NONE
-highlight TabLineSel guibg=#e0e0e0 ctermbg=253 guifg=#494b53 ctermfg=23
-highlight StatusLineNC guibg=#494b53 ctermbg=23 guifg=#e0e0e0 ctermfg=253
+highlight TabLineSel guibg=#e0e0e0 ctermbg=254 guifg=#494b53 ctermfg=239
+highlight StatusLine guifg=#494b53 ctermfg=239
+highlight StatusLineNC guibg=#494b53 ctermbg=239 guifg=#e0e0e0 ctermfg=254
+highlight ModeMsg guifg=#494b53 ctermfg=239
+highlight NERDTreeFile guifg=#494b53 ctermfg=239
