@@ -97,28 +97,24 @@ call plug#begin('~/.vim/plugged')
 " General
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
-Plug 'matze/vim-move'
-  let g:move_key_modifier = 'C'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'preservim/nerdtree'
-  nnoremap <Space>f :NERDTreeToggle<CR>
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-  let NERDTreeMinimalUI = 1
-  let NERDTreeShowHidden = 1
-  let NERDTreeSortHiddenFirst = 1
-  let NERDTreeIgnore = ['\.git$', '\.vim$', '\~$']
-  let g:NERDTreeHijackNetrw = 0
-  let g:NERDTreeMapOpenSplit = "h"
-  let g:NERDTreeMapOpenVSplit = "v"
-  let g:NERDTreeMapOpenInTab = "t"
-  let g:NERDTreeMapPreview = "p"
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'jamessan/vim-gnupg'
+" Plug 'preservim/nerdtree'
+"   nnoremap <Space>f :NERDTreeToggle<CR>
+"   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"   let NERDTreeMinimalUI = 1
+"   let NERDTreeShowHidden = 1
+"   let NERDTreeSortHiddenFirst = 1
+"   let NERDTreeIgnore = ['\.git$', '\.vim$', '\~$']
+"   let g:NERDTreeHijackNetrw = 0
+"   let g:NERDTreeMapOpenSplit = "h"
+"   let g:NERDTreeMapOpenVSplit = "v"
+"   let g:NERDTreeMapOpenInTab = "t"
+"   let g:NERDTreeMapPreview = "p"
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'powerman/vim-plugin-ruscmd'
 
 " Search
@@ -150,12 +146,9 @@ Plug 'rhysd/vim-gfm-syntax'
   let g:markdown_fenced_languages = ['sh', 'html', 'css', 'json', 'yaml', 'js=javascript']
 Plug 'jxnblk/vim-mdx-js'
 Plug 'othree/html5.vim'
-Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'stephenway/postcss.vim'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'jparise/vim-graphql'
-Plug 'alampros/vim-styled-jsx'
 Plug 'bfrg/vim-c-cpp-modern'
 
 " IDE
@@ -172,8 +165,8 @@ Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>showDocumentation()<CR>
+" Show documentation in preview window
+nnoremap <silent>K :call <SID>showDocumentation()<CR>
 function! s:showDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -185,9 +178,26 @@ endfunction
 " Search
 command! -nargs=+ Grep call Grep(<f-args>)
 nnoremap <Space>g :Grep<Space>
-function! Grep(pattern, files)
-  execute 'vimgrep ' . a:pattern . ' ' . a:files
-  copen
+function! Grep(pattern, files = '')
+  if empty(a:files)
+    let is_git = system('git rev-parse --is-inside-work-tree 2>/dev/null')
+    if is_git =~ 'true'
+      let files = '`git ls-files -co --exclude-standard`'
+    else
+      let files = '*'
+    endif
+  else
+    let files = a:files
+  endif
+  cexpr []
+  silent! execute 'vimgrep ' . a:pattern . ' ' . files
+  let results = getqflist()
+  if empty(results)
+    echo 'No matches found: ' . a:pattern
+  else
+    echo 'Found ' . len(results) . ' matches'
+    copen
+  endif
 endfunction
 
 " Syntax colors
@@ -207,4 +217,4 @@ highlight TabLineSel guibg=#e0e0e0 ctermbg=254 guifg=#494b53 ctermfg=239
 highlight StatusLine guifg=#494b53 ctermfg=239
 highlight StatusLineNC guibg=#494b53 ctermbg=239 guifg=#e0e0e0 ctermfg=254
 highlight ModeMsg guifg=#494b53 ctermfg=239
-highlight NERDTreeFile guifg=#494b53 ctermfg=239
+" highlight NERDTreeFile guifg=#494b53 ctermfg=239
