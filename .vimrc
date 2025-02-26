@@ -122,7 +122,6 @@ Plug 'jamessan/vim-gnupg'
 Plug 'powerman/vim-plugin-ruscmd'
 
 " Search
-Plug 'vim-scripts/grep.vim'
 Plug 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_use_caching = 0
   let g:ctrlp_show_hidden = 1
@@ -175,13 +174,20 @@ call plug#end()
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>showDocumentation()<CR>
-
 function! s:showDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
     call CocAction('doHover')
   endif
+endfunction
+
+" Search
+command! -nargs=+ Grep call Grep(<f-args>)
+nnoremap <Space>g :Grep<Space>
+function! Grep(pattern, files)
+  execute 'vimgrep ' . a:pattern . ' ' . a:files
+  copen
 endfunction
 
 " Syntax colors
