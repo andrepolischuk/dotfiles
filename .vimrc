@@ -97,24 +97,11 @@ call plug#begin('~/.vim/plugged')
 " General
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-sleuth'
-Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-commentary'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'preservim/nerdtree'
-"   nnoremap <Space>f :NERDTreeToggle<CR>
-"   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"   let NERDTreeMinimalUI = 1
-"   let NERDTreeShowHidden = 1
-"   let NERDTreeSortHiddenFirst = 1
-"   let NERDTreeIgnore = ['\.git$', '\.vim$', '\~$']
-"   let g:NERDTreeHijackNetrw = 0
-"   let g:NERDTreeMapOpenSplit = "h"
-"   let g:NERDTreeMapOpenVSplit = "v"
-"   let g:NERDTreeMapOpenInTab = "t"
-"   let g:NERDTreeMapPreview = "p"
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'powerman/vim-plugin-ruscmd'
 
 " Search
@@ -124,15 +111,6 @@ Plug 'ctrlpvim/ctrlp.vim'
   let g:ctrlp_open_new_file = 't'
   let g:ctrlp_match_window = 'order:ttb,max:20,results:20'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" Linting
-Plug 'w0rp/ale'
-  nnoremap ]r :ALENextWrap<CR>
-  nnoremap [r :ALEPreviousWrap<CR>
-  let g:ale_sign_error = '!'
-  let g:ale_sign_warning = '?'
-  let g:ale_set_highlights = 0
-  let g:ale_lint_on_text_changed = 'never'
 
 " Languages
 Plug 'elzr/vim-json'
@@ -152,6 +130,13 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'bfrg/vim-c-cpp-modern'
 
 " IDE
+Plug 'w0rp/ale'
+  nnoremap ]r :ALENextWrap<CR>
+  nnoremap [r :ALEPreviousWrap<CR>
+  let g:ale_sign_error = '!'
+  let g:ale_sign_warning = '?'
+  let g:ale_set_highlights = 0
+  let g:ale_lint_on_text_changed = 'never'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gy <Plug>(coc-type-definition)
@@ -165,9 +150,9 @@ Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
-" Show documentation in preview window
-nnoremap <silent>K :call <SID>showDocumentation()<CR>
-function! s:showDocumentation()
+" Documentation in preview window
+nnoremap K :call <SID>ShowDocumentation()<CR>
+function! s:ShowDocumentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
@@ -176,9 +161,10 @@ function! s:showDocumentation()
 endfunction
 
 " Search
-command! -nargs=+ Grep call Grep(<f-args>)
-nnoremap <Space>g :Grep<Space>
-function! Grep(pattern, files = '')
+command! -nargs=+ Grep call s:Grep(<f-args>)
+nnoremap ? :Grep<Space>
+nnoremap \\ :Grep //<CR>
+function! s:Grep(pattern, files = '')
   if empty(a:files)
     let is_git = system('git rev-parse --is-inside-work-tree 2>/dev/null')
     if is_git =~ 'true'
@@ -191,11 +177,7 @@ function! Grep(pattern, files = '')
   endif
   cexpr []
   silent! execute 'vimgrep ' . a:pattern . ' ' . files
-  let results = getqflist()
-  if empty(results)
-    echo 'No matches found: ' . a:pattern
-  else
-    echo 'Found ' . len(results) . ' matches'
+  if !empty(getqflist())
     copen
   endif
 endfunction
@@ -217,4 +199,3 @@ highlight TabLineSel guibg=#e0e0e0 ctermbg=254 guifg=#494b53 ctermfg=239
 highlight StatusLine guifg=#494b53 ctermfg=239
 highlight StatusLineNC guibg=#494b53 ctermbg=239 guifg=#e0e0e0 ctermfg=254
 highlight ModeMsg guifg=#494b53 ctermfg=239
-" highlight NERDTreeFile guifg=#494b53 ctermfg=239
